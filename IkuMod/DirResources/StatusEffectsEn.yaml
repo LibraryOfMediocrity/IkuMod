@@ -1,0 +1,37 @@
+IkuSurgeSe:
+  Name: Surge
+  Description: |-
+    The next {Level} attack card{Level:plural one='' other='s'} played deal 50% more damage.
+  Brief: Played attack cards deal 50% more damage. Lose 1 Surge when an attack card is played.
+
+IkuVeilDisc:
+  Name: Veil 
+  Brief: Shuffle the selected card into draw pile and temporarily reduce its cost by {Mana}.
+
+IkuVeilNextSe:
+  Name: Veil Next cards
+  Description: |-
+    |Veil| the next {Level} card{Level:plural one='' other='s'} played.
+
+IkuConduitDisc:
+  Name: Conduit
+  Brief: Consume 1 |Surge| to activate  the listed |Conduit| effect.
+
+IkuSlowPlaySe:
+  Name: Tempered Fury
+  Description: |-
+    At the start of {PlayerName}'s turn, if {Limit} or less cards were played last turn, gain {Level} |Temporary Firepower| and |Spirit|.
+    ({Cards} card{Card:plural one=' has' other='s have'} been played this turn)
+
+IkuGeneratorSe:
+  Name: Elekiter Dragon Palace
+  Description: At the start of {PlayerName}'s turn, gain {Level} |Surge|.
+  
+IkuVeilFirstSe:
+  Name: Veils Like Sky
+  Description: The first {Level} {Level:plural one='card' other='cards'} played each turn {Level:plural one='is' other='are'} |Veiled|.
+
+IkuSkyBarrierSe:
+  Name: Sky's Domain
+  Description: |-
+    Whenever a card is |veiled|, gain {Level} |Barrier|.

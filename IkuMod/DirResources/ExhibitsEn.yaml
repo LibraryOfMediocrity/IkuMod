@@ -1,0 +1,14 @@
+IkuExhibitR:
+  Name: Weather Crystal
+  Description: |-
+    Adds {Mana} to the mana base. Cards Unique to |Iku| are added to the card pool.
+    Whenever {PlayerName} plays {Value2} attack cards, gain 1 |Surge|.
+  FlavorText: |-
+    Iku doesn't own many things.
+
+IkuExhibitU:
+  Name: Celestial Veil
+  Description: |-
+    Adds {Mana} to the mana base. Cards Unique to |Iku| are added to the card pool.
+    At the start of {PlayerName}'s first turn each combat, add a |Veils Like Wind| to the hand
+  FlavorText: Image stolen from SWR.

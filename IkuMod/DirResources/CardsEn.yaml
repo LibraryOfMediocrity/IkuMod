@@ -1,0 +1,221 @@
+
+IkuAttackR:
+  Name: Dragon Fish's Strike
+  Description: Deal {Damage} Damage.
+  FlavorText: Hits with the power of God.
+
+IkuAttackU:
+  Name: Celestial Maiden's Strike
+  Description: Deal {Damage} Damage.
+  FlavorText: She hits *really* hard.
+
+IkuBlockR:
+  Name: Gale Shroud
+  Description: Gain {Block} |Block|.
+  FlavorText: Nothing beats a good ol' wind barrier.
+
+IkuBlockU: 
+  Name: Electric Field
+  Description: Gain {Block} |Block|.
+  FlavorText: Energy bullets get canceled by an energy shield, it only makes sense.
+
+IkuVeilTest:
+  Name: Veils
+  Description: |-
+    |Veil| up to {Value1} card{Value1:plural one='' other='s'} from the hand.
+    |Veil| the next {Value1} card{Value1:plural one='' other='s'} played.
+  FlavorText: Veil test
+
+IkuAddSurgeTest:
+  Name: Gain Surge
+  Description: |-
+    Gain {Value1} |Surge
+  FlavorText: Surge test
+
+IkuSurgeBlock:
+  Name: Plasma Screen
+  Description: |-
+    Gain {Block} |Block|. 
+    |Conduit|: Gain {Block} |Block| again.
+  UpgradedDescription: |-
+    Gain {Block} |Block|. 
+    |Conduit|: Gain {Shield} |Barrier|.
+  FlavorText: |-
+    Don't worry about how it handles sword slashes.
+    
+
+IkuTempoHit:
+  Name: Tempo Strikes
+  Description: |-
+    Deal {Damage} Damage.
+    Draw {Value1} card.
+    If the last card played this combat was an Attack, gain {Value2} |Surge|.
+  FlavorText: Like the beat of a drum.
+
+IkuLightRod:
+  Name: Lightning Rod
+  Description: |-
+    Deal {Damage} Damage.
+    |Conduit|: Gain {Mana}.
+
+IkuChainLight:
+  Name: Chain Lightning
+  Description: |-
+    Deal {Damage} Damage.
+    When an enemy is defeated using {SelfName}, repeat this effect on the enemy with the least life.
+  FlavorText: TRIPLE KILL
+
+IkuVeilBlock:
+  Name: Dragon's Backwind
+  Description: |-
+    Gain {Block} |Block|.
+    |Veil| the next {Value1} card{Value1:plural one='' other='s'} played.
+  FlavorText: What goes around, comes around faster.
+
+IkuDrawMana:
+  Name: Dance of Tennyo
+  Description: |-
+    Draw {Value1} cards.
+    |When Veiled|: Gain {Mana}.
+  FlavorText: |-
+    Darn fishermen, always taking my hagoromo!
+
+IkuSlowPlay:
+  Name: Tempered Fury
+  Description: |-
+    At the start of {PlayerName}'s turn, if {Value2} or less cards were played last turn, gain {Value1} |Temporary Firepower| and |Spirit|.
+  FlavorText: |-
+    No need to attack now ~
+    Why not wait a little bit?
+
+IkuCarBattery:
+  Name: Jumper Cables
+  Description: |-
+    Draw {Value1} cards.
+    Gain {Value2} |Surge|.
+    |Debut|: Gain {DebutValue} additional |Surge|.
+  ExtraDescription1: |-
+    Draw {Value1} cards.
+    Gain {Value2} |Surge|.
+    |d:Debut: Gain {DebutValue} additional Surge|.
+  FlavorText: It gets you going.
+ 
+IkuAirDraw:
+  Name: Aerial Observer
+  Description: |-
+    Discard up to {Value1} cards.
+    Put that many cards with a cost of 1 or less into the hand.
+  FlavorText: |-
+    Sitting high in the clouds, there's no need to interfere.
+
+IkuGenerator:
+  Name: Elekiter Dragon Palace
+  Description: |-
+    At the start of {PlayerName}'s turn, gain {Value1} |Surge|.
+  UpgradedDescription: |-
+    Gain {Value2} |Surge|.
+    At the start of {PlayerName}'s turn, gain {Value1} |Surge|.
+  FlavorText: A rather novel form of electricity generation.
+
+IkuVeilFirst:
+  Name: Veils Like Sky
+  Description: |-
+    |Veil| the first card played each turn.
+  UpgradedDescription: |-
+    |Veil| the first card played each turn.
+    Add a |Splash| to the hand.
+  FlavorText: |-
+    U can't touch this
+
+IkuWaterWind:
+  Name: Veils Like Water
+  Description: |-
+    Deal {Damage} damage.
+    Draw {Value1} card{Value1:plural one='' other='s'}.
+    |Veil| {Value1} card{Value1:plural one='' other='s'} from the hand.
+
+IkuThunder:
+  Name: Thunder Breaker
+  Description: |-
+    Deal {Damage} damage.
+    Gain {Value1} |Surge|.
+    If the last card played this turn was a Defense card, gain {Value2} |Surge| instead.
+
+IkuDragonDrill:
+  Name: Dragonfish Drill
+  Description: |-
+    Deal {Damage} damage {Value1} times.
+    |Conduit|: {SelfName} hits {Value1} additional times.
+
+IkuAttackBlock:
+  Name: Atmospheric Reading
+  Description: |-
+    Deal {Damage} damage.
+    If the selected enemy intends to attack, gain {Block} |Block|.
+
+IkuAnvil:
+  Name: Anvil Crawler
+  Description: |-
+    Deal {Damage} damage.
+    |Veil| up to {Value1} cards from the hand.
+    Gain {Value2} |Surge| for each card |Veiled| this way.
+
+IkuRailgun: 
+  Name: Springstorm Railgun
+  Description: |-
+    Deal {Damage} damage.
+    |Growth|: {SelfName} deals {Value1} more damage this combat.
+
+IkuSmite:
+  Name: Smite of the Goddess
+  Description: |-
+    Deal {Damage} damage.
+    |When Veiled|: Increase {SelfName}'s damage by {Value1} this combat.
+  FlavorText: death.
+
+IkuSkyBarrier:
+  Name: Sky's Domain
+  Description: |-
+    Whenever a card is |Veiled|, gain {Value1} |Barrier|.
+
+IkuVeilWind:
+  Name: Veils Like Wind
+  Description: |-
+    |Veil| {Value1} card{Value1:plural one='' other='s'}. 
+    Draw {Value1} card{Value1:plural one='' other='s'}. 
+
+IkuRedSprite:
+  Name: Red Sprite
+  Description: |-
+    Deal {Damage} damage.
+    Gain {Value1} |Surge|.
+  FlavorText: zap zap
+
+IkuJuggernaut:
+  Name: Deep Sea Juggernaut
+  Description: |-
+    Gain {Block} |Block|.
+    Add {Value1} |Red Sprite{Value1:plural one='' other='s'}| to the hand.
+
+
+
+
+
+
+
+
+
+TrapTest:
+  Name: Caltrops
+  Description: |-
+    |Trap Card|: |Triggers| when {PlayerName} is attacked. Targets that enemy.
+    |Triggered|: Deal {Damage} damage.
+  FlavorText: Ignore these, they are for testing purposes and are not part of the mod.
+
+ChompTest:
+  Name: Grand Chomper
+  Description: |-
+    |Trap Card|: |Triggers| at the end of the turn. Targets the enemy with the least life by default.
+    |Triggered|: If the enemy has {Value1} or less life, defeat it. Increase {SelfName}'s range by {Value2}. 
+  FlavorText: Ignore these, they are for testing purposes and are not part of the mod.
+  
