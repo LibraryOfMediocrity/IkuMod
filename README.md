@@ -7,5 +7,6 @@ Includes the standard amount of cards (idk how much yet) complete with off-colou
 Colours: U/R
 Iku U:
 - veils
+  
 Iku R:
 - surge
