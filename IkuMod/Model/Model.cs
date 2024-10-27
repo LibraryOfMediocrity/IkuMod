@@ -1,14 +1,13 @@
 ﻿using Cysharp.Threading.Tasks;
+using IkuMod.Localization;
+using IkuMod.Player;
 using LBoL.ConfigData;
 using LBoLEntitySideloader;
 using LBoLEntitySideloader.Entities;
 using LBoLEntitySideloader.Resource;
 using LBoLEntitySideloader.Utils;
-using UnityEngine;
-using IkuMod.Localization;
-using LBoL.Presentation;
-using IkuMod.Player;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace IkuMod.model
 

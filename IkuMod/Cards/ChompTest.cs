@@ -60,6 +60,7 @@ namespace IkuMod.Cards
                 if (DefaultTarget().Length == 1)
                 {
                     EnemyUnit enemyUnit = (EnemyUnit)DefaultTarget()[0];
+                    //these checks are unnecessary but I cant be bothered to remove them
                     if (enemyUnit != null && enemyUnit.IsAlive)
                     {
                         //iterate through TrapTriggered results and return them immediately so effects happen immediately
@@ -80,6 +81,7 @@ namespace IkuMod.Cards
                     int i = 0;
                     foreach (EnemyUnit enemyUnit in (EnemyUnit[])DefaultTarget())
                     {
+                        //these checks are unnecessary but I cant be bothered to remove them
                         if (enemyUnit != null || enemyUnit.IsAlive)
                         {
                             enemyUnits[i] = enemyUnit;
@@ -108,7 +110,7 @@ namespace IkuMod.Cards
                 Debug.Log("Chomper Triggered: " + enemy.Name);
                 Debug.Log("Pre kill values: Hp - " + enemy.Hp + ", Chomp Range - " + base.Value1);
 
-                if (enemy.Hp <= this.Value1)
+                if (enemy != null && enemy.IsAlive && enemy.Hp <= this.Value1)
                 {
                     yield return new ForceKillAction(base.Battle.Player, enemy);
                 }
@@ -124,7 +126,7 @@ namespace IkuMod.Cards
                     Debug.Log("Chomper Triggered: " + enemy.Name);
                     Debug.Log("Pre kill values: Hp - " + enemy.Hp + ", Chomp Range - " + base.Value1);
 
-                    if (enemy.Hp <= this.Value1)
+                    if (enemy != null && enemy.IsAlive && enemy.Hp <= this.Value1)
                     {
                         yield return new ForceKillAction(base.Battle.Player, enemy);
                     }

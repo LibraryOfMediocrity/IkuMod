@@ -35,3 +35,13 @@ IkuSkyBarrierSe:
   Name: Sky's Domain
   Description: |-
     Whenever a card is |veiled|, gain {Level} |Barrier|.
+
+IkuDynamoSe:
+  Name: Dragonfish Dynamo
+  Description: |-
+    Whenever an attack card is |Veiled|, gain {Level} |Surge|.
+
+IkuNextTurnDraw:
+  Name: Next Turn Draw
+  Description: At the start of {OwnerName}'s turn, draw {Level} additional card{Level:plural one='' other='s'}.
+  Brief: At the start of {OwnerName}'s next turn, draw additional cards.

@@ -29,7 +29,7 @@ IkuVeilTest:
 IkuAddSurgeTest:
   Name: Gain Surge
   Description: |-
-    Gain {Value1} |Surge
+    Gain {Value1} |Surge|.
   FlavorText: Surge test
 
 IkuSurgeBlock:
@@ -197,6 +197,47 @@ IkuJuggernaut:
     Gain {Block} |Block|.
     Add {Value1} |Red Sprite{Value1:plural one='' other='s'}| to the hand.
 
+IkuDynamo: 
+  Name: Dragonfish Dynamo
+  Description: |-
+    Whenever an attack card is |Veiled|, gain {Value1} |Surge|.
+
+IkuReturn:
+  Name: Reversed Cyclone
+  Description: |-
+    Gain {Block} |Block|. 
+    Choose up to {Value1} card{Value1:plural one='' other='s'} in the discard pile to |Veil|.
+
+IkuShock:
+  Name: Thundercloud Stickleback
+  Description: |-
+    Deals {Damage} damage.
+    Gain |Static Charge| equal to damage dealt.
+  DetailText: This |Static Charge| does not disappear at the start of the turn.
+
+IkuVeilTime:
+  Name: Veils Like Time
+  Description: |-
+    |Veil| any number of cards from the hand.
+    Draw {Value1} additional cards next turn.
+    End {PlayerName}'s turn. Then, take an extra turn.
+    |Time Limit| {Mana}.
+  ExtraDescription1: |-
+    |Veil| any number of cards from the hand.
+    Draw {Value1} additional cards next turn.
+    End {PlayerName}'s turn. Then, take an extra turn.
+    |d:Time Limit {Mana}.|
+
+TenshiFriend:
+  Name: Tenshi Test
+  Description: "{PassiveCostIcon}Gain {Value2} |Barrier| for each time {PlayerName} took damage last turn."
+  ExtraDescription1: "{ActiveCostIcon}Gain {Value1} |Firepower| and |Spirit|."
+  ExtraDescription2: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
+  UpgradedExtraDescription2: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
+
+IkuTenshiSword:
+  Name: Sword of Scarlet Thought
+  Description: Deal {Damage} damage {Value1} times.
 
 
 
@@ -204,6 +245,15 @@ IkuJuggernaut:
 
 
 
+DebuffCopierTest:
+  Name: Copy Debuff
+  Description: Apply the enemy's debuffs
+
+AutoPlayTest:
+  Name: Play card
+  Description: |-
+    Choose cards and perform their played effects.
+    May break something, but seems to work so far.
 
 TrapTest:
   Name: Caltrops
