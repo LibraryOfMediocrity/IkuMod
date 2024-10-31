@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "version_number": "1.0.0",
-  "website_url": "",
-  "description": "",
+  "name": "Iku Nagae",
+  "version_number": "0.0.1",
+  "website_url": "https://github.com/LibraryOfMediocrity/IkuMod",
+  "description": "Adds Iku as a character to Lost Branch of Legend.",
   "dependencies": [ "BepInEx-BepInExPack-5.4.2100", "TeamNeo-Sideloader-0.5.0"]
 }

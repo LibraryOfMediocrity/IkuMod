@@ -20,16 +20,19 @@ namespace IkuMod.BattleActions
 
         public override IEnumerable<Phase> GetPhases()
         {
-            yield return base.CreateEventPhase<VeilCardEventArgs>("PreVeil", Args, CustomGameEventManager.PreVeilEvent);
-
-            yield return base.CreatePhase("Resolve", new Action(this.ResolvePhase), true);
-
-            yield return base.CreatePhase("Main", delegate
+            if (Args.Card != null)
             {
-                Args.Card?.DecreaseTurnCost(new ManaGroup { Any = 2 });
-            }, hasViewer: true);
+                yield return base.CreateEventPhase<VeilCardEventArgs>("PreVeil", Args, CustomGameEventManager.PreVeilEvent);
 
-            yield return base.CreateEventPhase<VeilCardEventArgs>("PostVeil", Args, CustomGameEventManager.PostVeilEvent);
+                yield return base.CreatePhase("Resolve", new Action(this.ResolvePhase), true);
+
+                yield return base.CreatePhase("Main", delegate
+                {
+                    Args.Card?.DecreaseTurnCost(new ManaGroup { Any = 2 });
+                }, hasViewer: true);
+
+                yield return base.CreateEventPhase<VeilCardEventArgs>("PostVeil", Args, CustomGameEventManager.PostVeilEvent);
+            }
         }
 
         private void ResolvePhase()

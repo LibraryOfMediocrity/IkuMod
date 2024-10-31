@@ -15,13 +15,15 @@ namespace IkuMod.Cards
 {
     public sealed class IkuShockDef : IkuCardTemplate
     {
-        public override bool UseDefault => false; 
+        public override bool UseDefault => true; 
 
         public override CardConfig MakeConfig()
         {
             CardConfig config = GetCardDefaultConfig();
             config.Type = CardType.Attack;
             config.Rarity = Rarity.Uncommon;
+            config.GunName = GunNameID.GetGunFromId(1100);
+            config.GunNameBurst = GunNameID.GetGunFromId(1100);
             config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Red };
             config.TargetType = TargetType.SingleEnemy;
             config.Cost = new ManaGroup() { White = 1, Red = 1 };

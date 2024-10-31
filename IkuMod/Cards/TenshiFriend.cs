@@ -16,7 +16,7 @@ namespace IkuMod.Cards
 {
     public sealed class TenshiFriendDef :IkuCardTemplate
     {
-        public CardType CardTyope { get; private set; }
+        public override bool UseDefault => true;
 
         public override CardConfig MakeConfig()
         {

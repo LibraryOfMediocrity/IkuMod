@@ -19,8 +19,8 @@ namespace IkuMod.Cards
         public override CardConfig MakeConfig()
         {
             CardConfig config = GetCardDefaultConfig();
-            config.GunName = "Simple1";
-            config.GunNameBurst = "Simple2";
+            config.GunName = GunNameID.GetGunFromId(6173);
+            config.GunNameBurst = GunNameID.GetGunFromId(6173);
             config.Rarity = Rarity.Uncommon;
             config.Type = CardType.Attack;
             config.HideMesuem = false;

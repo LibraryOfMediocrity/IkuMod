@@ -18,6 +18,8 @@ namespace IkuMod.Cards
             CardConfig config = GetCardDefaultConfig();
             config.Rarity = Rarity.Uncommon;
             config.Type = CardType.Attack;
+            config.GunName = GunNameID.GetGunFromId(7340);
+            config.GunNameBurst = GunNameID.GetGunFromId(7341);
             config.Colors = new List<ManaColor>() { ManaColor.Green };
             config.Cost = new ManaGroup() { Any = 1, Green = 1 };
             config.UpgradedCost = new ManaGroup() { Any = 1 };

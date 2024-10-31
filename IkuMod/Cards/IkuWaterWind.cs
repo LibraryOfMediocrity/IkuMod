@@ -62,7 +62,7 @@ namespace IkuMod.Cards
                 }
                 else
                 {
-                    Card[] cards = base.Battle.HandZone.ToArray<Card>();
+                    Card[] cards = (from card in base.Battle.HandZone where card != this select card).ToArray();
                     foreach (Card card in cards)
                     {
                         yield return new VeilCardAction(card);

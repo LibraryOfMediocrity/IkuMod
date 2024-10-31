@@ -22,7 +22,7 @@ namespace IkuMod.Cards
             config.Rarity = Rarity.Uncommon;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Red = 2 };
-            config.TargetType = TargetType.Self;
+            config.TargetType = TargetType.Nobody;
             config.Value1 = 1;
             config.Value2 = 2;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe" };

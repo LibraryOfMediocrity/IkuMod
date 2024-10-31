@@ -229,21 +229,77 @@ IkuVeilTime:
     |d:Time Limit {Mana}.|
 
 TenshiFriend:
-  Name: Tenshi Test
+  Name: Tenshi, Child of Heaven
   Description: "{PassiveCostIcon}Gain {Value2} |Barrier| for each time {PlayerName} took damage last turn."
   ExtraDescription1: "{ActiveCostIcon}Gain {Value1} |Firepower| and |Spirit|."
   ExtraDescription2: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
-  UpgradedExtraDescription2: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
+  FlavorText: They don't actually like each other.
 
 IkuTenshiSword:
   Name: Sword of Scarlet Thought
-  Description: Deal {Damage} damage {Value1} times.
+  Description: Deal {Damage} damage {HitTimes} time{HitTimes:plural one='' other='s'}.
+
+IkuCirrus: 
+  Name: Cirrus Cutter
+  Description: |-
+    Deal {Damage} damage.
+    |Veil| the next card played.
+
+IkuChanneling:
+  Name: Divine Channeling
+  Description: |-
+    Gain {Value1} life.
+    Gain {Value2} |Surge|.
+
+IkuUnmovable:
+  Name: Brave the Storm
+  Description: |-
+    Gain {Shield} |Barrier|.
+    Gain {Value1} |Graze|.
+    |Veil| any number of cards from the hand.
+    End {PlayerName}'s turn.
+
+IkuCrash:
+  Name: Storm Crasher
+  Description: |-
+    Deal {Damage} damage to each enemy.
+    Choose a card in the draw or discard pile.
+    Put it on top of the draw pile.
+
+IkuVeilSelf:
+  Name: Returning Typhoon
+  Description: |-
+    Deal {Damage} damage.
+    |Veil| this card.
+  FlavorText: The storm never ends.
+
+IkuCycle:
+  Name: Weather Cycle
+  Description: |-
+   Draw {Value1} card{Value1:plural one='' other='s'}.
+   |Veil| {Value2} card{Value2:plural one='' other='s'}. {Value2:plural one='It is' other='They are'} placed on the top of the draw pile.
+
+IkuExileStatus:
+  Name: Celestial Purity
+  Description: |-
+    Whenever a Status or Misfortune card is |Veiled|, |Exile| it and draw a card.
+  UpgradedDescription: |-
+    Whenever a Status or Misfortune card is |Veiled|, |Exile| it and draw a card.
+    |Veil| any number of cards from the hand.
+
+IkuTidal:
+  Name: Tidal Wave
+  Description: |-
+    |Veil| all cards in the hand.
+    Deal {Damage} damage.
+    Damage is increased by {Value1} for each card |Veiled| this way.
 
 
 
 
-
-
+CancelVeilTest:
+  Name: Cancel Veil
+  Description: This card cannot be veiled.
 
 DebuffCopierTest:
   Name: Copy Debuff
