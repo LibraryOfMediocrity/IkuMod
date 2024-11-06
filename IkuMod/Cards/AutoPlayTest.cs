@@ -1,5 +1,4 @@
-﻿using IkuMod.BattleActions;
-using IkuMod.Cards.Template;
+﻿using IkuMod.Cards.Template;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -7,11 +6,8 @@ using LBoL.Core.Battle;
 using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
-using LBoL.Presentation.UI.Panels;
 using LBoLEntitySideloader.Attributes;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace IkuMod.Cards
 {
@@ -55,7 +51,7 @@ namespace IkuMod.Cards
                 //this can result in a negative unity teammate, which still works but has negative unity (you have to get it back)
                 //so this instead returns the passive
                 if (card.CardType == CardType.Friend && card.Summoned) battleactions = card.GetPassiveActions();
-
+                card.NotifyActivating();
                 foreach (var action in battleactions)
                 {   
                     yield return action;

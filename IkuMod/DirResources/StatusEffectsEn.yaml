@@ -45,3 +45,8 @@ IkuNextTurnDraw:
   Name: Next Turn Draw
   Description: At the start of {OwnerName}'s turn, draw {Level} additional card{Level:plural one='' other='s'}.
   Brief: At the start of {OwnerName}'s next turn, draw additional cards.
+
+IkuJuicedSe:
+  Name: Blessing of Heaven
+  Description: |-
+    Whenever an attack card is played, gain {GainMana}.

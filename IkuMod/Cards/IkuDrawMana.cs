@@ -24,7 +24,7 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Any = 1, Blue = 1 };
             config.TargetType = TargetType.Nobody;
             config.Mana = new ManaGroup() { Blue = 1, Philosophy = 1 };
-            config.UpgradedMana = new ManaGroup() { Blue = 2, Philosophy = 1 }; 
+            config.UpgradedMana = new ManaGroup() { Blue = 1, Philosophy = 2 }; 
             config.Value1 = 3;
             config.UpgradedValue1 = 4;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
@@ -56,7 +56,7 @@ namespace IkuMod.Cards
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
-            yield return new DrawManyCardAction(base.Value1);
+            yield return new DrawManyCardAction(base.Value1); 
             yield break;
         }
 

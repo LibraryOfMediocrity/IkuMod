@@ -228,9 +228,9 @@ IkuVeilTime:
     End {PlayerName}'s turn. Then, take an extra turn.
     |d:Time Limit {Mana}.|
 
-TenshiFriend:
+IkuTenshiFriend:
   Name: Tenshi, Child of Heaven
-  Description: "{PassiveCostIcon}Gain {Value2} |Barrier| for each time {PlayerName} took damage last turn."
+  Description: "{PassiveCostIcon}Gain {Value2} |Barrier| for each time {PlayerName} lost life last turn."
   ExtraDescription1: "{ActiveCostIcon}Gain {Value1} |Firepower| and |Spirit|."
   ExtraDescription2: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
   FlavorText: They don't actually like each other.
@@ -269,7 +269,7 @@ IkuCrash:
 IkuVeilSelf:
   Name: Returning Typhoon
   Description: |-
-    Deal {Damage} damage.
+    Deal {Damage} damage {Value1} times.
     |Veil| this card.
   FlavorText: The storm never ends.
 
@@ -293,6 +293,48 @@ IkuTidal:
     |Veil| all cards in the hand.
     Deal {Damage} damage.
     Damage is increased by {Value1} for each card |Veiled| this way.
+
+IkuDrawBlock:
+  Name: Hurricane's Eye
+  Description: |-
+    Gain {Block} |Block|.
+    |When Veiled|: Place {Value1} random cards that cost 3 or less from the draw pile into the hand and gain {Mana}.
+
+IkuFuryStrikes:
+  Name: Oarfish Slasher
+  Description: |-
+    Deal {Damage} damage {Hits} times.
+    Gain {Value1} |Surge|.
+    |When Veiled|: Add an |Oarfish Slasher| to the hand. It costs {Mana} and has |Exile|.
+  UpgradedDescription: |-
+    Deal {Damage} damage {Hits} times.
+    Gain {Value1} |Surge|.
+    |When Veiled|: Add an |Oarfish Slasher+| to the hand. It costs {Mana} and has |Exile|.
+
+IkuEcho:
+  Name: Resonant Winds
+  Description: |-
+    Gain {Value2} |Graze|.
+    Choose a card in hand to |Veil|. It gains |Echo|.
+
+IkuPressure: 
+  Name: Pressure Wave
+  Description: |-
+    Deal {Damage} damage to each enemy {Value1} times.
+    |Veil| all cards in hand that cost more than 1.
+
+IkuJuiced:
+  Name: Blessing of Heaven
+  Description: |-
+    Whenever an attack card is played, gain {Mana}.
+
+IkuAddVeil:
+  Name: Wind Hatchet
+  Description: |-
+    Deal {Damage} damage.
+    Add a |Veils Like Wind| to the hand.
+
+
 
 
 
@@ -324,4 +366,9 @@ ChompTest:
     |Trap Card|: |Triggers| at the end of the turn. Targets the enemy with the least life by default.
     |Triggered|: If the enemy has {Value1} or less life, defeat it. Increase {SelfName}'s range by {Value2}. 
   FlavorText: Ignore these, they are for testing purposes and are not part of the mod.
+
+TransformRock:
+  Name: Become Rock
+  Description: Become Rock
+  FlavorText: Become Rock
   

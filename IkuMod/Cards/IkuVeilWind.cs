@@ -42,6 +42,7 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuVeilWindDef))]
     public sealed class IkuVeilWind : Card
     {
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             

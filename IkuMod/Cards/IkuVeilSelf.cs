@@ -24,8 +24,9 @@ namespace IkuMod.Cards
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.Cost = new ManaGroup() { Any = 1, Blue = 1 };
             config.TargetType = TargetType.SingleEnemy;
-            config.Damage = 20;
-            config.UpgradedDamage = 25;
+            config.Damage = 10;
+            config.UpgradedDamage = 12;
+            config.Value1 = 2;
             config.UpgradedKeywords = Keyword.Accuracy;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuVeilDisc" };
@@ -39,7 +40,12 @@ namespace IkuMod.Cards
     {
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
-            yield return AttackAction(selector);
+            string gunname = base.GunName;
+            for (int i = 0; i < base.Value1; i++)
+            {
+                yield return AttackAction(selector, gunname);
+                if (gunname != "Instant") gunname = "Instant";
+            }
             yield return new VeilCardAction(this);
             yield break;
         }

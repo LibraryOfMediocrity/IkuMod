@@ -25,7 +25,7 @@ namespace IkuMod.Cards
             config.GunNameBurst = GunNameID.GetGunFromId(511);
             config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Blue, ManaColor.Black, ManaColor.Red, ManaColor.Green, ManaColor.Colorless };
             config.Cost = new ManaGroup() { Any = 2 };
-            config.Damage = 15;
+            config.Damage = 10;
             config.Value1 = 0;
             config.Keywords = Keyword.Exile;
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

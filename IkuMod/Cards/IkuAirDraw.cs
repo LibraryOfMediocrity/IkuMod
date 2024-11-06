@@ -22,7 +22,7 @@ namespace IkuMod.Cards
         {
             CardConfig config = GetCardDefaultConfig();
             config.Type = CardType.Skill;
-            config.Rarity = Rarity.Uncommon;
+            config.Rarity = Rarity.Common;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.TargetType = TargetType.Nobody;
             config.Cost = new ManaGroup() { Blue = 1 };
