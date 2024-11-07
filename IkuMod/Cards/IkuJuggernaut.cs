@@ -23,9 +23,9 @@ namespace IkuMod.Cards
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.TargetType = TargetType.Self;
             config.Cost = new ManaGroup() { Any = 2, Red = 1 };
-            config.UpgradedCost = new ManaGroup() { Any = 1, Red = 1 };
             config.Block = 18;
             config.Value1 = 1;
+            config.UpgradedValue1 = 2;
             config.RelativeKeyword = Keyword.Block;
             config.UpgradedRelativeKeyword = Keyword.Block;
             config.RelativeCards = new List<string>() { "IkuRedSprite" };
@@ -43,7 +43,10 @@ namespace IkuMod.Cards
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return new CastBlockShieldAction(base.Battle.Player, base.Block);
-            yield return new AddCardsToHandAction(new Card[] { Library.CreateCard<IkuRedSprite>() });
+            for (int i = 0; i < base.Value1; i++) 
+            {
+                yield return new AddCardsToHandAction(new Card[] { Library.CreateCard<IkuRedSprite>() });
+            }
             yield break;
         }
     }

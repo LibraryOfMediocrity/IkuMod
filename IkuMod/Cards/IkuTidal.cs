@@ -32,6 +32,8 @@ namespace IkuMod.Cards
             config.UpgradedDamage = 8;
             config.Value1 = 5;
             config.UpgradedValue1 = 8;
+            config.Keywords = Keyword.Accuracy;
+            config.UpgradedKeywords = Keyword.Accuracy;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

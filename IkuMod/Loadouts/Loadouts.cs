@@ -39,9 +39,9 @@ namespace IkuMod.Loadouts
             ModleName: "",
             NarrativeColor: "#534DEB",
             IsSelectable: true,
-            MaxHp: 80,
+            MaxHp: 73,
             InitialMana: new ManaGroup() { Blue = 2, Red = 2 },
-            InitialMoney: 99,
+            InitialMoney: 55,
             InitialPower: 0,
             UltimateSkillA: "IkuUltA",
             UltimateSkillB: "IkuUltB",
@@ -51,7 +51,7 @@ namespace IkuMod.Loadouts
 
             DeckA: IkuLoadouts.DeckA,
             DeckB: IkuLoadouts.DeckB,
-            DifficultyA: 3,
+            DifficultyA: 2,
             DifficultyB: 2
         );
     }

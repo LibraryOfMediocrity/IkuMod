@@ -16,6 +16,8 @@ namespace IkuMod.Cards
 {
     public sealed class IkuFuryStrikesDef : IkuCardTemplate
     {
+        public override bool UseDefault => true;
+
         public override CardConfig MakeConfig()
         {
             CardConfig config = GetCardDefaultConfig();
@@ -25,7 +27,6 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Any = 1, Hybrid = 1, HybridColor = 5 };
             config.TargetType = TargetType.SingleEnemy;
             config.Damage = 7;
-            config.UpgradedDamage = 9;
             config.Value1 = 1;
             config.Value2 = 1;
             config.Mana = new ManaGroup() { Any = 0 };
@@ -72,7 +73,10 @@ namespace IkuMod.Cards
                 yield return AttackAction(selector, gunname);
                 if (gunname != "Instant") gunname = "Instant";
             }
-            yield return BuffAction<IkuSurgeSe>(base.Value1);
+            if (this.IsUpgraded)
+            {
+                yield return BuffAction<IkuSurgeSe>(base.Value1);
+            }
             yield break;
         }
     }

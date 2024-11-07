@@ -145,7 +145,7 @@ IkuDragonDrill:
   Name: Dragonfish Drill
   Description: |-
     Deal {Damage} damage {Value1} times.
-    |Conduit|: {SelfName} hits {Value1} additional times.
+    |Conduit|: {SelfName} hits {Value2} additional times.
 
 IkuAttackBlock:
   Name: Atmospheric Reading
@@ -304,7 +304,6 @@ IkuFuryStrikes:
   Name: Oarfish Slasher
   Description: |-
     Deal {Damage} damage {Hits} times.
-    Gain {Value1} |Surge|.
     |When Veiled|: Add an |Oarfish Slasher| to the hand. It costs {Mana} and has |Exile|.
   UpgradedDescription: |-
     Deal {Damage} damage {Hits} times.
@@ -324,7 +323,7 @@ IkuPressure:
     |Veil| all cards in hand that cost more than 1.
 
 IkuJuiced:
-  Name: Blessing of Heaven
+  Name: Mandate of Heaven
   Description: |-
     Whenever an attack card is played, gain {Mana}.
 
@@ -334,8 +333,18 @@ IkuAddVeil:
     Deal {Damage} damage.
     Add a |Veils Like Wind| to the hand.
 
+IkuArmageddon:
+  Name: Doomsday Forecast
+  Description: |-
+    At the start of {PlayerName}'s next turn:
+    Gain {Value2} |Surge|
+    Gain {Mana}
+    Put {Value2} random attack cards from the draw pile into the hand.
 
-
+IkuRebound:
+  Name: U Current
+  Description: |-
+    The next {Value1:plural one='' other='two '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand.
 
 
 

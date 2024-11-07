@@ -50,3 +50,13 @@ IkuJuicedSe:
   Name: Blessing of Heaven
   Description: |-
     Whenever an attack card is played, gain {GainMana}.
+
+IkuArmageddonSe:
+  Name: Doomsday Forecast
+  Description: |-
+    At the start of {PlayerName}'s next turn{Level:plural one='' other='s'}: gain {Num} |Surge|, gain {Mana} and put {Num} random attack cards from the draw pile into the hand.
+
+IkuReboundSe:
+  Name: Rebound
+  Description: |-
+    The next {Level} card{Level:plural one='' other='s'} |Veiled| are returned to the hand.

@@ -24,6 +24,7 @@ namespace IkuMod.Cards
             config.Damage = 5;
             config.Value1 = 3;
             config.UpgradedValue1 = 4;
+            config.Value2 = 2;
             config.TargetType = TargetType.SingleEnemy;
             config.Keywords = Keyword.Accuracy;
             config.UpgradedKeywords = Keyword.Accuracy; 
@@ -56,7 +57,7 @@ namespace IkuMod.Cards
         {
             if (PlayInTriggered)
             {
-                hits = base.Value1 * 2;
+                hits = base.Value1 + base.Value2;
             }
             else
             {
