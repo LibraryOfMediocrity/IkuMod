@@ -24,8 +24,8 @@ Colours: U/R
 
 - Some attack cards have conduit effects. These require 2 surge to get both the damage and conduit effect.
 If you only have 1 surge, you only get the damage.
-- If you have surge with knives or potions, do NOT trust the damage numbers. They are LYING.
- The game calculates their preview damage because they are attack cards, but if they are not played, they do not get that damage.
+- If you have surge with knives or potions, do **NOT** trust the damage numbers. They are **LYING**.
+The game calculates their preview damage because they are attack cards, but if they are not played, they do not get that damage.
 - There are buffs that veil played cards. These will not trigger if the card was exiled, if it was an ability or tool, if it was a teammate
 being summoned(but not if it was already summoned, e.g. actives), or if the card had been veiled by some other effect already.
 
