@@ -19,7 +19,7 @@ If you only have 1 surge, you only get the damage.
 - There are buffs that veil played cards. These will not trigger if the card was exiled, if it was an ability, if it was a teammate
 being summoned(but not if it was already summoned, e.g. actives), or if the card had been veiled by some other effect already.
 # Credits
-Rmrf maxx - Made samplecharactermod, the code of which I built this mod upon.
-Lbol modding discord - helped me work some things out
-Google images - Where I got my temporary "art" from
+Rmrf maxx - Made samplecharactermod, the code of which I built this mod upon.  
+Lbol modding discord - helped me work some things out  
+Google images - Where I got my temporary "art" from  
 Zun - Made touhou project. The world would not be the same if we did not have Reimu.
