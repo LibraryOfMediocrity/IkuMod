@@ -33,5 +33,12 @@ being summoned(but not if it was already summoned, e.g. actives), or if the card
 
 Rmrf maxx - Made samplecharactermod, the code of which I built this mod upon.  
 Lbol modding discord - helped me work some things out  
+Zun - Made touhou project. The world would not be the same if we did not have Reimu.  
+
+# Art Credits
+
 Google images - Where I got my temporary "art" from  
-Zun - Made touhou project. The world would not be the same if we did not have Reimu.
+Dairi - Made the art I used for some of the player stands  
+Twilight frontiers/Alphes - Made the art I used for some of the other player stands, 
+and the Iku sprite I used is from HM. The exhibit sprites I used are assets from SWR/Soku 
+that I recreated, so credit is due there as well.
