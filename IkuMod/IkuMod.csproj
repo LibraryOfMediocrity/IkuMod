@@ -342,6 +342,7 @@
       <None Remove="Resources\IkuDrawMana.png" />
       <None Remove="Resources\IkuExhibitR.png" />
       <None Remove="Resources\IkuExhibitU.png" />
+      <None Remove="Resources\IkuExhibitUInactive.png" />
       <None Remove="Resources\IkuGenerator.png" />
       <None Remove="Resources\IkuGeneratorSe.png" />
       <None Remove="Resources\IkuLightRod.png" />

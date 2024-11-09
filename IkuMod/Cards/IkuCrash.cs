@@ -45,7 +45,15 @@ namespace IkuMod.Cards
         {
             yield return AttackAction(selector);
             if (base.Battle.BattleShouldEnd) yield break;
-            List<Card> list = (from card in base.Battle.DrawZoneToShow.Concat(base.Battle.DiscardZone) where card != this select card).ToList<Card>();
+            List<Card> list;
+            if (this.IsUpgraded)
+            {
+                list = (from card in base.Battle.DrawZoneToShow.Concat(base.Battle.DiscardZone) where card != this select card).ToList<Card>();
+            }
+            else
+            {
+                list = (from card in base.Battle.DrawZoneToShow where card != this select card).ToList<Card>();
+            }
             SelectCardInteraction interaction = new SelectCardInteraction(0, base.Value1, list)
             {
                 Source = this

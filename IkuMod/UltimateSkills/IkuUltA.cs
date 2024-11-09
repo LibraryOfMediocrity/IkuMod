@@ -7,6 +7,10 @@ using LBoL.Core.Units;
 using LBoL.Core;
 using LBoLEntitySideloader.Attributes;
 using System.Collections.Generic;
+using IkuMod.Cards.Template;
+using IkuMod.BattleActions;
+using System.Linq;
+using LBoL.Core.Battle.Interactions;
 
 //using IkuMod.BattleActions;
 
@@ -17,7 +21,9 @@ namespace IkuMod.UltimateSkills
         public override UltimateSkillConfig MakeConfig()
         {
             UltimateSkillConfig config = GetDefaulUltConfig();
-            config.Damage = 50;
+            config.Damage = 20;
+            config.Value1 = 5;
+            config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             return config;
         }
     }
@@ -27,15 +33,28 @@ namespace IkuMod.UltimateSkills
     {
         public IkuUltA()
         {
-            TargetType = TargetType.SingleEnemy;
-            GunName = "Simple2";
+            TargetType = TargetType.AllEnemies;
+            GunName = GunNameID.GetGunFromId(4711);
         }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector)
         {
             yield return PerformAction.Spell(base.Battle.Player, "IkuUltA");
-            EnemyUnit enemy = selector.GetEnemy(Battle);
-            yield return new DamageAction(Owner, enemy, Damage, GunName, GunType.Single);
+            Unit[] targets = selector.GetUnits(base.Battle);
+            yield return new DamageAction(Owner, targets, Damage, GunName, GunType.Single);
+            if (!base.Battle.BattleShouldEnd)
+            {
+                SelectHandInteraction interaction = new SelectHandInteraction(0, 100, base.Battle.HandZone)
+                {
+                    Source = this
+                };
+                yield return new InteractionAction(interaction, false);
+                foreach (Card card in interaction.SelectedCards)
+                {
+                    yield return new VeilCardAction(card);
+                }
+                yield return new DrawManyCardAction(base.Value1);
+            }
             yield break;
         }
     }

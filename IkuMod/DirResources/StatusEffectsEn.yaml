@@ -49,7 +49,7 @@ IkuNextTurnDraw:
 IkuJuicedSe:
   Name: Blessing of Heaven
   Description: |-
-    Whenever an attack card is played, gain {GainMana}.
+    Whenever an attack card is played in which mana was paid, gain {GainMana}.
 
 IkuArmageddonSe:
   Name: Doomsday Forecast

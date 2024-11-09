@@ -4,6 +4,7 @@ using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
 using LBoLEntitySideloader.Attributes;
 using System;
@@ -23,9 +24,10 @@ namespace IkuMod.Cards
             config.Rarity = Rarity.Rare;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Any = 2, Red = 3 };
-            config.UpgradedCost = new ManaGroup() { Any = 2, Red = 2 };
             config.Mana = new ManaGroup() { Philosophy = 1 };
             config.Value1 = 1;
+            config.Value2 = 2;
+            config.UpgradedRelativeCards = new List<string>() { "IkuRedSprite" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;
         }
@@ -37,6 +39,7 @@ namespace IkuMod.Cards
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return BuffAction<IkuJuicedSe>(base.Value1);
+            yield return new AddCardsToHandAction(new Card[] { Library.CreateCard<IkuRedSprite>(), Library.CreateCard<IkuRedSprite>() });
             yield break;
         }
     }

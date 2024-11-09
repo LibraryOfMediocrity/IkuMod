@@ -39,7 +39,7 @@ namespace IkuMod.Loadouts
             ModleName: "",
             NarrativeColor: "#534DEB",
             IsSelectable: true,
-            MaxHp: 73,
+            MaxHp: 77,
             InitialMana: new ManaGroup() { Blue = 2, Red = 2 },
             InitialMoney: 55,
             InitialPower: 0,

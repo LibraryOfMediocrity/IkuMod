@@ -30,6 +30,7 @@ namespace IkuMod.Cards
             config.Block = 18;
             config.UpgradedBlock = 24;
             config.Value1 = 3;
+            config.UpgradedValue1 = 4;
             config.Mana = new ManaGroup() { Blue = 1 };
             config.UpgradedMana = new ManaGroup() { Philosophy = 1 };
             config.RelativeKeyword = Keyword.Block;

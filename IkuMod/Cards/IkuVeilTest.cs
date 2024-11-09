@@ -23,6 +23,8 @@ namespace IkuMod.Cards
             config.Type = CardType.Skill;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.HideMesuem = true;
+            config.FindInBattle = false;
+            config.IsPooled = false;
             config.Cost = new ManaGroup { Any = 1 };
             config.Value1 = 1;
             config.UpgradedValue1 = 2;

@@ -26,8 +26,8 @@ namespace IkuMod.Cards
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Any = 1 };
             config.Damage = 10;
-            config.UpgradedDamage = 15;
             config.Value1 = 1;
+            config.UpgradedValue1 = 2;
             config.IsPooled = false;
             config.FindInBattle = false;
             config.Keywords = Keyword.Exile | Keyword.Retain;

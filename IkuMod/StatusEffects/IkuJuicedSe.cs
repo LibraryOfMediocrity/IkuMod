@@ -54,7 +54,7 @@ namespace IkuMod.StatusEffects
 
         private IEnumerable<BattleAction> OnCardUsed(CardUsingEventArgs args)
         {
-            if (args.Card != null && args.Card.CardType == CardType.Attack)
+            if (args.Card != null && args.Card.CardType == CardType.Attack && args.ConsumingMana != ManaGroup.Empty)
             {
                 yield return new GainManaAction(GainMana);
                 this.NotifyActivating();

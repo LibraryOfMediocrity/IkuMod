@@ -63,7 +63,8 @@ IkuChainLight:
   Description: |-
     Deal {Damage} Damage.
     When an enemy is defeated using {SelfName}, repeat this effect on the enemy with the least life.
-  FlavorText: TRIPLE KILL
+  FlavorText: |-
+    I can't believe it, they're all dead
 
 IkuVeilBlock:
   Name: Dragon's Backwind
@@ -78,7 +79,7 @@ IkuDrawMana:
     Draw {Value1} cards.
     |When Veiled|: Gain {Mana}.
   FlavorText: |-
-    Darn fishermen, always taking my hagoromo!
+    (~^.^)~
 
 IkuSlowPlay:
   Name: Tempered Fury
@@ -98,7 +99,7 @@ IkuCarBattery:
     Draw {Value1} cards.
     Gain {Value2} |Surge|.
     |d:Debut: Gain {DebutValue} additional Surge|.
-  FlavorText: It gets you going.
+  FlavorText: mmm yummy car battery
  
 IkuAirDraw:
   Name: Aerial Observer
@@ -106,7 +107,7 @@ IkuAirDraw:
     Discard up to {Value1} cards.
     Put that many cards with a cost of 1 or less into the hand.
   FlavorText: |-
-    Sitting high in the clouds, there's no need to interfere.
+    Get involved? Interfere? How silly.
 
 IkuGenerator:
   Name: Elekiter Dragon Palace
@@ -125,7 +126,7 @@ IkuVeilFirst:
     |Veil| the first card played each turn.
     Add a |Splash| to the hand.
   FlavorText: |-
-    U can't touch this
+    If I were going for accuracy, this would be a graze card.
 
 IkuWaterWind:
   Name: Veils Like Water
@@ -133,6 +134,8 @@ IkuWaterWind:
     Deal {Damage} damage.
     Draw {Value1} card{Value1:plural one='' other='s'}.
     |Veil| {Value1} card{Value1:plural one='' other='s'} from the hand.
+  FlavorText: |-
+    Don't forget to hydrate!
 
 IkuThunder:
   Name: Thunder Breaker
@@ -263,6 +266,10 @@ IkuCrash:
   Name: Storm Crasher
   Description: |-
     Deal {Damage} damage to each enemy.
+    Choose a card in the draw pile.
+    Put it on top of the draw pile.
+  UpgradedDescription: |-
+    Deal {Damage} damage to each enemy.
     Choose a card in the draw or discard pile.
     Put it on top of the draw pile.
 
@@ -276,8 +283,8 @@ IkuVeilSelf:
 IkuCycle:
   Name: Weather Cycle
   Description: |-
-   Draw {Value1} card{Value1:plural one='' other='s'}.
-   |Veil| {Value2} card{Value2:plural one='' other='s'}. {Value2:plural one='It is' other='They are'} placed on the top of the draw pile.
+    Draw {Value1} card{Value1:plural one='' other='s'}.
+    |Veil| {Value2} card{Value2:plural one='' other='s'}. {Value2:plural one='It is' other='They are'} placed on the top of the draw pile.
 
 IkuExileStatus:
   Name: Celestial Purity
@@ -301,7 +308,7 @@ IkuDrawBlock:
     |When Veiled|: Place {Value1} random cards that cost 3 or less from the draw pile into the hand and gain {Mana}.
 
 IkuFuryStrikes:
-  Name: Oarfish Slasher
+  Name: Fish Fillet
   Description: |-
     Deal {Damage} damage {Hits} times.
     |When Veiled|: Add an |Oarfish Slasher| to the hand. It costs {Mana} and has |Exile|.
@@ -309,6 +316,8 @@ IkuFuryStrikes:
     Deal {Damage} damage {Hits} times.
     Gain {Value1} |Surge|.
     |When Veiled|: Add an |Oarfish Slasher+| to the hand. It costs {Mana} and has |Exile|.
+  FlavorText: |-
+    Don't get it twisted, the fish is the one doing the filleting.
 
 IkuEcho:
   Name: Resonant Winds
@@ -325,13 +334,18 @@ IkuPressure:
 IkuJuiced:
   Name: Mandate of Heaven
   Description: |-
-    Whenever an attack card is played, gain {Mana}.
+    Whenever an attack card is played in which mana was paid, gain {Mana}.
+  UpgradedDescription: |-
+    Whenever an attack card is played in which mana was paid, gain {Mana}.
+    Add {Value2} |Red Sprites| to the hand.
+  FlavorText: The Universe has decided; I cannot lose
 
 IkuAddVeil:
   Name: Wind Hatchet
   Description: |-
     Deal {Damage} damage.
     Add a |Veils Like Wind| to the hand.
+  FlavorText: chop chop
 
 IkuArmageddon:
   Name: Doomsday Forecast
@@ -340,11 +354,13 @@ IkuArmageddon:
     Gain {Value2} |Surge|
     Gain {Mana}
     Put {Value2} random attack cards from the draw pile into the hand.
+  FlavorText: This may have a negative impact on the trout population.
 
 IkuRebound:
   Name: U Current
   Description: |-
     The next {Value1:plural one='' other='two '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand.
+  FlavorText: Like it never left.
 
 
 

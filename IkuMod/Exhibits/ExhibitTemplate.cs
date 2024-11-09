@@ -6,6 +6,7 @@ using LBoLEntitySideloader.Resource;
 using IkuMod.Config;
 using IkuMod.ImageLoader;
 using IkuMod.Localization;
+using LBoL.Core;
 
 namespace IkuMod.Exhibits
 {
@@ -35,6 +36,7 @@ namespace IkuMod.Exhibits
         {
             return IkuDefaultConfig.GetDefaultExhibitConfig();
         }
+
 
     }
 }

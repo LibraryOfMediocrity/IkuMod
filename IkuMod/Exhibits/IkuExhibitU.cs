@@ -30,6 +30,7 @@ namespace IkuMod.Exhibits
     [EntityLogic(typeof(IkuExhibitUDef))]
     public sealed class IkuExhibitU : ShiningExhibit
     {
+
         protected override void OnEnterBattle()
         {
             base.ReactBattleEvent<UnitEventArgs>(base.Battle.Player.TurnStarted, new EventSequencedReactor<UnitEventArgs>(this.OnPlayerTurnStarted));

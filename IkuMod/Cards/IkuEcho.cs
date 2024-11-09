@@ -25,13 +25,14 @@ namespace IkuMod.Cards
             config.Type = CardType.Skill;
             config.Rarity = Rarity.Uncommon;
             config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.Red };
-            config.Cost = new ManaGroup() { Any = 1, Hybrid = 1, HybridColor = 5 };
+            config.Cost = new ManaGroup() { Hybrid = 1, HybridColor = 5 };
             config.UpgradedCost = new ManaGroup() { Any = 1 };
-            config.Value2 = 2;
+            config.Value2 = 1;
             config.Value1 = 1;
             config.TargetType = TargetType.Self;
             config.RelativeKeyword = Keyword.Echo;
             config.UpgradedRelativeKeyword = Keyword.Echo;
+            config.UpgradedKeywords = Keyword.Replenish;
             config.RelativeEffects = new List<string>() { "Graze", "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "Graze", "IkuVeilDisc" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

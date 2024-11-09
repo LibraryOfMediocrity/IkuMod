@@ -26,7 +26,7 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Any = 1 };
             config.UpgradedCost = new ManaGroup() { Any = 0 };
             config.Value1 = 4;
-            config.UpgradedValue1 = 5;
+            config.UpgradedValue1 = 6;
             config.Value2 = 3;
             config.UpgradedValue2 = 4;
             config.Keywords = Keyword.Exile;
