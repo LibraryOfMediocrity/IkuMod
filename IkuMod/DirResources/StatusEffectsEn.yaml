@@ -12,6 +12,7 @@ IkuVeilNextSe:
   Name: Veil Next cards
   Description: |-
     |Veil| the next {Level} card{Level:plural one='' other='s'} played.
+  Brief: Veils the next cards played.
 
 IkuConduitDisc:
   Name: Conduit
@@ -60,3 +61,13 @@ IkuReboundSe:
   Name: Rebound
   Description: |-
     The next {Level} card{Level:plural one='' other='s'} |Veiled| are returned to the hand.
+
+IkuExileStatusSe:
+  Name: Breath of Paradise
+  Description: |-
+    Whenever a Status or Misfortune card is |Veiled|, |Exile| it and draw a card.
+
+IkuArcSe:
+  Name: Arc Lightning
+  Description: |-
+    Attack cards deal {Level} more damage when {PlayerName} has surge.

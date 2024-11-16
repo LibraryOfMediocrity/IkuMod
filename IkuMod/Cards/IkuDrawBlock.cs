@@ -25,7 +25,7 @@ namespace IkuMod.Cards
             config.Type = CardType.Defense;
             config.Rarity = Rarity.Uncommon;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
-            config.Cost = new ManaGroup() { Any = 2, Blue = 1 };
+            config.Cost = new ManaGroup() { Any = 1, Blue = 2 };
             config.TargetType = TargetType.Self;
             config.Block = 18;
             config.UpgradedBlock = 24;
@@ -55,7 +55,7 @@ namespace IkuMod.Cards
             if (args.Card == this)
             {
                 base.NotifyActivating();
-                for (int i = 1; i <= 3; i++)
+                for (int i = 1; i <= base.Value1; i++)
                 {
                     if (base.Battle.DrawZone.Count == 0)
                     {

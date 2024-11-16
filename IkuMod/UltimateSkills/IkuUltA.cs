@@ -42,7 +42,7 @@ namespace IkuMod.UltimateSkills
             yield return PerformAction.Spell(base.Battle.Player, "IkuUltA");
             Unit[] targets = selector.GetUnits(base.Battle);
             yield return new DamageAction(Owner, targets, Damage, GunName, GunType.Single);
-            if (!base.Battle.BattleShouldEnd)
+            if (!base.Battle.BattleShouldEnd && base.Battle.HandZone.Count > 0)
             {
                 SelectHandInteraction interaction = new SelectHandInteraction(0, 100, base.Battle.HandZone)
                 {

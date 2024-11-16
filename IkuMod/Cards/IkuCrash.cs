@@ -31,7 +31,6 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Any = 1, Red = 1 };
             config.UpgradedCost = new ManaGroup() { Any = 2 };
             config.Damage = 13;
-            config.UpgradedDamage = 16;
             config.Value1 = 1;
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;

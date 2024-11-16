@@ -104,9 +104,9 @@ namespace IkuMod.Cards
             yield break;
         }
 
-        public override int AdditionalShield
+        public ShieldInfo PassiveShield
         {
-            get { return base.Value2 * TimesHitLast; }
+            get { return new ShieldInfo(base.Value2 * TimesHitLast, BlockShieldType.Direct); }
         }
 
 
@@ -128,7 +128,7 @@ namespace IkuMod.Cards
                 {
                     yield break;
                 }
-                yield return new CastBlockShieldAction(base.Battle.Player, base.Shield, false);
+                yield return new CastBlockShieldAction(base.Battle.Player, PassiveShield, false);
                 num = i;
             }
             yield break;

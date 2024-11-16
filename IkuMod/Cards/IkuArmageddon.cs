@@ -14,6 +14,8 @@ namespace IkuMod.Cards
 {
     public sealed class IkuArmageddonDef : IkuCardTemplate
     {
+        public override bool UseDefault => true;
+
         public override CardConfig MakeConfig()
         {
             CardConfig config = GetCardDefaultConfig();

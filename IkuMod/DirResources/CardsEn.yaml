@@ -235,7 +235,7 @@ IkuTenshiFriend:
   Name: Tenshi, Child of Heaven
   Description: "{PassiveCostIcon}Gain {Value2} |Barrier| for each time {PlayerName} lost life last turn."
   ExtraDescription1: "{ActiveCostIcon}Gain {Value1} |Firepower| and |Spirit|."
-  ExtraDescription2: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
+  ExtraDescription3: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
   FlavorText: They don't actually like each other.
 
 IkuTenshiSword:
@@ -287,7 +287,7 @@ IkuCycle:
     |Veil| {Value2} card{Value2:plural one='' other='s'}. {Value2:plural one='It is' other='They are'} placed on the top of the draw pile.
 
 IkuExileStatus:
-  Name: Celestial Purity
+  Name: Breath of Paradise
   Description: |-
     Whenever a Status or Misfortune card is |Veiled|, |Exile| it and draw a card.
   UpgradedDescription: |-
@@ -361,6 +361,11 @@ IkuRebound:
   Description: |-
     The next {Value1:plural one='' other='two '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand.
   FlavorText: Like it never left.
+
+IkuArc: 
+  Name: Arc Lightning
+  Description: |-
+    Whenever {PlayerName} has |Surge|, attack cards deal {Value1} more damage.
 
 
 
