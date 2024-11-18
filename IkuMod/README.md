@@ -23,6 +23,8 @@ Colours: U/R
   
 # Some Notes
 
+- I am considering changing Surge to not specify played attack cards and just affect attack cards in general since
+Koishi has added more attacks that deal damage without being played, and it just makes damage calculations jank.  
 - Some attack cards have conduit effects. These require 2 surge to get both the damage and conduit effect.
 If you only have 1 surge, you only get the damage.
 - If you have surge with knives or potions, do **NOT** trust the damage numbers. They are **LYING**.
