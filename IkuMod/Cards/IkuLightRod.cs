@@ -26,6 +26,8 @@ namespace IkuMod.Cards
             config.Keywords = Keyword.Accuracy;
             config.UpgradedKeywords = Keyword.Accuracy;
             config.Mana = new ManaGroup() { Philosophy = 3 };
+            config.RelativeKeyword = Keyword.Philosophy;
+            config.UpgradedRelativeKeyword = Keyword.Philosophy;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe", "IkuConduitDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuSurgeSe", "IkuConduitDisc" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

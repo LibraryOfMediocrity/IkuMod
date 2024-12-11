@@ -51,7 +51,7 @@ namespace IkuMod.Cards
             }
             else
             {
-                list = (from card in base.Battle.DrawZoneToShow where card != this select card).ToList<Card>();
+                list = (from card in base.Battle.DiscardZone where card != this select card).ToList<Card>();
             }
             SelectCardInteraction interaction = new SelectCardInteraction(0, base.Value1, list)
             {

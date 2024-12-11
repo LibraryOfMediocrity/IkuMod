@@ -6,7 +6,7 @@ IkuSurgeSe:
 
 IkuVeilDisc:
   Name: Veil 
-  Brief: Shuffle the selected card into draw pile and temporarily reduce its cost by {Mana}.
+  Brief: Shuffle the selected card into draw pile. It |temporarily costs| {Mana} less.
 
 IkuVeilNextSe:
   Name: Veil Next cards
@@ -44,8 +44,13 @@ IkuDynamoSe:
 
 IkuNextTurnDraw:
   Name: Next Turn Draw
-  Description: At the start of {OwnerName}'s turn, draw {Level} additional card{Level:plural one='' other='s'}.
+  Description: At the start of {OwnerName}'s next turn, draw {Level} additional card{Level:plural one='' other='s'}.
   Brief: At the start of {OwnerName}'s next turn, draw additional cards.
+
+IkuNextTurnTempFire:
+  Name: Next Turn Temporary Firepower
+  Description: At the start of {OwnerName}'s next turn, gain {Level} |Temporary Firepower|.
+  Brief: At the start of {OwnerName}'s next turn, gain |Temporary Firepower|.
 
 IkuJuicedSe:
   Name: Blessing of Heaven
@@ -71,3 +76,14 @@ IkuArcSe:
   Name: Arc Lightning
   Description: |-
     Attack cards deal {Level} more damage when {PlayerName} has surge.
+
+
+
+Note: All status descriptions beyond this point are for experimental statuses and do not need translations
+
+AuraDisc:
+  Name: Aura
+  Description: |-
+    This card is not discarded when played and will provide a continuous effect while in hand this turn.
+  Brief: |-
+    This card is not discarded when played and will provide a continuous effect while in hand this turn.

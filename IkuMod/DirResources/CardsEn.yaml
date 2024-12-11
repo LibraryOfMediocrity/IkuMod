@@ -70,7 +70,7 @@ IkuVeilBlock:
   Name: Dragon's Backwind
   Description: |-
     Gain {Block} |Block|.
-    |Veil| the next {Value1} card{Value1:plural one='' other='s'} played.
+    |Veil| the {Value1:plural one='next card' other='next % cards'} played.
   FlavorText: What goes around, comes around faster.
 
 IkuDrawMana:
@@ -105,7 +105,7 @@ IkuAirDraw:
   Name: Aerial Observer
   Description: |-
     Discard up to {Value1} cards.
-    Put that many cards with a cost of 1 or less into the hand.
+    Put that many cards with a cost of 1 or less from the draw pile into the hand.
   FlavorText: |-
     Get involved? Interfere? How silly.
 
@@ -214,7 +214,7 @@ IkuReturn:
 IkuShock:
   Name: Thundercloud Stickleback
   Description: |-
-    Deals {Damage} damage.
+    Deal {Damage} damage.
     Gain |Static Charge| equal to damage dealt.
   DetailText: This |Static Charge| does not disappear at the start of the turn.
 
@@ -266,12 +266,13 @@ IkuCrash:
   Name: Storm Crasher
   Description: |-
     Deal {Damage} damage to each enemy.
-    Choose a card in the draw pile.
+    Choose a card in the discard pile.
     Put it on top of the draw pile.
   UpgradedDescription: |-
     Deal {Damage} damage to each enemy.
     Choose a card in the draw or discard pile.
     Put it on top of the draw pile.
+  FlavorText: Use your head!
 
 IkuVeilSelf:
   Name: Returning Typhoon
@@ -343,6 +344,7 @@ IkuJuiced:
 IkuAddVeil:
   Name: Wind Hatchet
   Description: |-
+    Gain {Block} |Block|.
     Deal {Damage} damage.
     Add a |Veils Like Wind| to the hand.
   FlavorText: chop chop
@@ -358,8 +360,7 @@ IkuArmageddon:
 
 IkuRebound:
   Name: U Current
-  Description: |-
-    The next {Value1:plural one='' other='two '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand.
+  Description: "The next{Value1:plural one=' ' other=' % '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand."
   FlavorText: Like it never left.
 
 IkuArc: 
@@ -367,7 +368,30 @@ IkuArc:
   Description: |-
     Whenever {PlayerName} has |Surge|, attack cards deal {Value1} more damage.
 
+IkuNimble:
+  Name: Nimble Oarfish
+  Description: |-
+    Deal {Damage} damage {Value1} times.
+    {Value2:plural one='% random card' other='% random cards'} in the hand |temporarily cost{Value2:plural one='s' other=''}| {Mana} less. Prioritizes attack cards.
 
+IkuTailwind:
+  Name: Windburner Blade
+  Description: |-
+    |For each <sprite="ManaSprite" name="1"> spent|: Deal {Damage} damage.
+    |For each <sprite="ManaSprite" name="U"> spent|: Draw {Value1} additional card{Value1:plural one='' other='s'} and gain {Value2} |Temporary Firepower| next turn.
+
+IkuFaraday:
+  Name: Faraday Cage
+  Description: |-
+    Gain {Value1} |Graze|.
+    Deal {Damage} damage.
+    Draw {Value2} card{Value2:plural one='' other='s'}.
+    |Conduit|: This card is played twice.
+
+
+
+
+Note: All card descriptions beyond this point are for experimental cards and do not need translations
 
 CancelVeilTest:
   Name: Cancel Veil
@@ -401,4 +425,12 @@ TransformRock:
   Name: Become Rock
   Description: Become Rock
   FlavorText: Become Rock
-  
+
+AuraCardTest:
+  Name: Fire Aura
+  Description: |-
+    |Aura|: Gain {AuraCount} |Temporary Firepower| whenever an attack card is played.
+    |When Played|: Increase {SelfName}'s |Temporary Firepower| gain by {Value1}.
+  ExtraDescription1: |-
+    |d:Aura: Gain {AuraCount} Temporary Firepower whenever an attack card is played.|
+    |When Played|: Increase {SelfName}'s |Temporary Firepower| gain by {Value1}.

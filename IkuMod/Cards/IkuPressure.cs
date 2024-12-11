@@ -23,6 +23,8 @@ namespace IkuMod.Cards
             config.Type = CardType.Attack;
             config.Rarity = Rarity.Common;
             config.TargetType = TargetType.AllEnemies;
+            config.GunName = GunNameID.GetGunFromId(4521);
+            config.GunNameBurst = GunNameID.GetGunFromId(4532);
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.Cost = new ManaGroup() { Any = 2, Blue = 1 };
             config.Damage = 9;

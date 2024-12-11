@@ -22,7 +22,6 @@ namespace IkuMod.UltimateSkills
         {
             UltimateSkillConfig config = GetDefaulUltConfig();
             config.Damage = 20;
-            config.Value1 = 5;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             return config;
         }
@@ -53,7 +52,7 @@ namespace IkuMod.UltimateSkills
                 {
                     yield return new VeilCardAction(card);
                 }
-                yield return new DrawManyCardAction(base.Value1);
+                yield return new DrawManyCardAction(interaction.SelectedCards.Count);
             }
             yield break;
         }

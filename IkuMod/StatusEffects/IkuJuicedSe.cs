@@ -18,6 +18,7 @@ namespace IkuMod.StatusEffects
         public override StatusEffectConfig MakeConfig()
         {
             StatusEffectConfig config = GetDefaultStatusEffectConfig();
+            config.Keywords = Keyword.Philosophy;
             return config;
         }
     }

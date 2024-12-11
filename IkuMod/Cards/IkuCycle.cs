@@ -26,8 +26,8 @@ namespace IkuMod.Cards
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.Cost = new ManaGroup() { Any = 1 };
             config.TargetType = TargetType.Nobody;
-            config.Value1 = 2;
-            config.UpgradedValue1 = 3;
+            config.Value1 = 1;
+            config.UpgradedValue1 = 2;
             config.Value2 = 1;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuVeilDisc" };

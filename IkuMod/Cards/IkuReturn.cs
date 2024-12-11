@@ -26,6 +26,7 @@ namespace IkuMod.Cards
             config.Rarity = Rarity.Uncommon;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.Cost = new ManaGroup() { Any = 1, Blue = 1 };
+            config.UpgradedCost = new ManaGroup() { Any = 1 };
             config.TargetType = TargetType.Self;
             config.Block = 10;
             config.UpgradedBlock = 12;

@@ -21,6 +21,8 @@ namespace IkuMod.StatusEffects
         public override StatusEffectConfig MakeConfig()
         {
             StatusEffectConfig config = GetDefaultStatusEffectConfig();
+            config.Keywords = Keyword.Philosophy;
+            config.RelativeEffects = new List<string>() { "IkuSurgeSe" };
             return config;
         }
     }

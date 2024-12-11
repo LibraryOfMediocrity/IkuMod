@@ -58,6 +58,7 @@ namespace IkuMod.StatusEffects
             if (args.Card.CardType == CardType.Attack)
             {
                 cardUsing = true;
+                this.NotifyActivating();
                 used = args.Card;
             }
             yield break;

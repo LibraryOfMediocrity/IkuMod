@@ -34,7 +34,7 @@ namespace IkuMod.Cards
             config.Mana = new ManaGroup() { Blue = 1 };
             config.UpgradedMana = new ManaGroup() { Philosophy = 1 };
             config.RelativeKeyword = Keyword.Block;
-            config.UpgradedRelativeKeyword = Keyword.Block;
+            config.UpgradedRelativeKeyword = Keyword.Block | Keyword.Philosophy;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

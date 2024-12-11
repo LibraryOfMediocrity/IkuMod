@@ -32,7 +32,7 @@ namespace IkuMod.Cards
             config.Mana = new ManaGroup() { Any = 0 };
             config.RelativeKeyword = Keyword.Exile;
             config.UpgradedRelativeKeyword = Keyword.Exile;
-            config.RelativeEffects = new List<string>() { "IkuSurgeSe", "IkuVeilDisc" };
+            config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuSurgeSe", "IkuVeilDisc" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;

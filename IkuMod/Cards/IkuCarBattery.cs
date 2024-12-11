@@ -45,7 +45,7 @@ namespace IkuMod.Cards
             }
         }
 
-        private string ExtraDescription1
+        private new string ExtraDescription1
         {
             get
             {

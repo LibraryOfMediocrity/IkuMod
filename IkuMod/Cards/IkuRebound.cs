@@ -13,7 +13,7 @@ using System.Text;
 namespace IkuMod.Cards
 {
     public sealed class IkuReboundDef : IkuCardTemplate
-    {
+    { 
         public override bool UseDefault => true;
 
         public override CardConfig MakeConfig()
@@ -24,6 +24,7 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.Nobody;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.Cost = new ManaGroup() { Blue = 1 };
+            config.UpgradedCost = new ManaGroup() { Any = 1 };
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };

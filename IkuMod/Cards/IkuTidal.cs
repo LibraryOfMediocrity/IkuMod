@@ -27,11 +27,11 @@ namespace IkuMod.Cards
             config.GunNameBurst = GunNameID.GetGunFromId(30030);
             config.Rarity = Rarity.Uncommon;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
-            config.Cost = new ManaGroup() { Blue = 2 };
-            config.Damage = 5;
-            config.UpgradedDamage = 8;
-            config.Value1 = 5;
-            config.UpgradedValue1 = 8;
+            config.Cost = new ManaGroup() { Any = 1, Blue = 1 };
+            config.Damage = 7;
+            config.UpgradedDamage = 10;
+            config.Value1 = 7;
+            config.UpgradedValue1 = 10;
             config.Keywords = Keyword.Accuracy;
             config.UpgradedKeywords = Keyword.Accuracy;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };

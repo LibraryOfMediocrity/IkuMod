@@ -12,13 +12,12 @@ namespace IkuMod.Cards
         public override CardConfig MakeConfig()
         {
             CardConfig config = GetCardDefaultConfig();
-            config.GunName = "Simple1";
-            config.GunNameBurst = "Simple2";
+            config.GunName = GunNameID.GetGunFromId(6031);
+            config.GunNameBurst = GunNameID.GetGunFromId(6031);
             config.Rarity = Rarity.Common;
             config.Type = CardType.Attack;
             config.HideMesuem = false;
             config.IsPooled = false;
-            config.FindInBattle = false;
             config.Damage = 10;
             config.UpgradedDamage = 14;
             config.TargetType = TargetType.SingleEnemy;

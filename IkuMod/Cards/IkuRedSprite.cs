@@ -29,7 +29,6 @@ namespace IkuMod.Cards
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
             config.IsPooled = false;
-            config.FindInBattle = false;
             config.Keywords = Keyword.Exile | Keyword.Retain;
             config.UpgradedKeywords = Keyword.Exile | Keyword.Retain;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe" };

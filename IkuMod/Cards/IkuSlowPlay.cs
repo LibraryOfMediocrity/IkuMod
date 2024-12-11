@@ -23,6 +23,8 @@ namespace IkuMod.Cards
             config.Value1 = 4;
             config.Value2 = 4;
             config.UpgradedValue2 = 5;
+            config.RelativeEffects = new List<string>() { "TempFirepower", "TempSpirit" };
+            config.UpgradedRelativeEffects = new List<string>() { "TempFirepower", "TempSpirit" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;
         }

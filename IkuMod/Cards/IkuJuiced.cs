@@ -27,6 +27,8 @@ namespace IkuMod.Cards
             config.Mana = new ManaGroup() { Philosophy = 1 };
             config.Value1 = 1;
             config.Value2 = 2;
+            config.RelativeKeyword = Keyword.Philosophy;
+            config.UpgradedRelativeKeyword = Keyword.Philosophy;
             config.UpgradedRelativeCards = new List<string>() { "IkuRedSprite" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;

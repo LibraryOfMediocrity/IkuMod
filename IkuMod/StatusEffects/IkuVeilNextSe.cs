@@ -31,6 +31,7 @@ namespace IkuMod.StatusEffects
         {
             veilnext = false;
             base.ReactOwnerEvent<CardUsingEventArgs>(base.Battle.CardUsed, new EventSequencedReactor<CardUsingEventArgs>(this.OnCardUsed));
+            base.ReactOwnerEvent<CardUsingEventArgs>(base.Battle.CardUsing, new EventSequencedReactor<CardUsingEventArgs>(this.OnCardUsing));
             base.ReactOwnerEvent<VeilCardEventArgs>(CustomGameEventManager.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
         
@@ -54,6 +55,12 @@ namespace IkuMod.StatusEffects
         }
 
         Card card = null;
+
+        private IEnumerable<BattleAction> OnCardUsing(CardUsingEventArgs args)
+        {
+            card = null;
+            yield break;
+        }
 
         private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)
         {

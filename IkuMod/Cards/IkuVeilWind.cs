@@ -25,7 +25,6 @@ namespace IkuMod.Cards
             config.Type = CardType.Skill;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.TargetType = TargetType.Nobody;
-            config.FindInBattle = false;
             config.IsPooled = false;
             config.Cost = new ManaGroup() { Any = 0 };
             config.Value1 = 1;

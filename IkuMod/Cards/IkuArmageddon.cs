@@ -24,10 +24,12 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.Nobody;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Any = 1, Red = 1 };
-            config.UpgradedCost = new ManaGroup() { Red = 1 };
+            config.UpgradedCost = new ManaGroup() { Any = 1 };
             config.Value1 = 1;
             config.Value2 = 3;
             config.Mana = new ManaGroup() { Philosophy = 3 };
+            config.RelativeKeyword = Keyword.Philosophy;
+            config.UpgradedRelativeKeyword = Keyword.Philosophy;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuSurgeSe" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

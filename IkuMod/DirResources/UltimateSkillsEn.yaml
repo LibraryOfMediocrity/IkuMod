@@ -3,7 +3,7 @@ IkuUltA:
   Content: Swimming Oarfish Shot
   Description: |-
     Deal {Damage} damage to each enemy. |Accurate|
-    Veil any number of cards from the hand. Draw {Value1} cards.
+    Veil any number of cards from the hand. Draw that many cards.
 
 IkuUltB:
   Title: Thunder Sign
