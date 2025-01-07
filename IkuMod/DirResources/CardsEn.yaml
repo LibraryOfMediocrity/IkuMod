@@ -2,22 +2,22 @@
 IkuAttackR:
   Name: Dragon Fish's Strike
   Description: Deal {Damage} Damage.
-  FlavorText: Hits with the power of God.
+  FlavorText: Hits with the power of God, for 10(14) damage.
 
 IkuAttackU:
   Name: Celestial Maiden's Strike
   Description: Deal {Damage} Damage.
-  FlavorText: She hits *really* hard.
+  FlavorText: This fish got hands!
 
 IkuBlockR:
   Name: Gale Shroud
   Description: Gain {Block} |Block|.
-  FlavorText: Nothing beats a good ol' wind barrier.
+  FlavorText: Blows away your problems.
 
 IkuBlockU: 
   Name: Electric Field
   Description: Gain {Block} |Block|.
-  FlavorText: Energy bullets get canceled by an energy shield, it only makes sense.
+  FlavorText: The electromagnetic waves destructively interfere with danmaku and cancel them out, it's simple science.
 
 IkuVeilTest:
   Name: Veils
@@ -41,7 +41,7 @@ IkuSurgeBlock:
     Gain {Block} |Block|. 
     |Conduit|: Gain {Shield} |Barrier|.
   FlavorText: |-
-    Don't worry about how it handles sword slashes.
+    Not quite the same as your TV.
     
 
 IkuTempoHit:
@@ -50,7 +50,7 @@ IkuTempoHit:
     Deal {Damage} Damage.
     Draw {Value1} card.
     If the last card played this combat was an Attack, gain {Value2} |Surge|.
-  FlavorText: Like the beat of a drum.
+  FlavorText: Keep the beat!
 
 IkuLightRod:
   Name: Lightning Rod
@@ -64,14 +64,14 @@ IkuChainLight:
     Deal {Damage} Damage.
     When an enemy is defeated using {SelfName}, repeat this effect on the enemy with the least life.
   FlavorText: |-
-    I can't believe it, they're all dead
+    Five kedamas never knew what hit em.
 
 IkuVeilBlock:
   Name: Dragon's Backwind
   Description: |-
     Gain {Block} |Block|.
     |Veil| the {Value1:plural one='next card' other='next % cards'} played.
-  FlavorText: What goes around, comes around faster.
+  FlavorText: Shuffling the deck is a lie promoted by Big Sakuya to sell more Quantum Tunneling.
 
 IkuDrawMana:
   Name: Dance of Tennyo
@@ -79,15 +79,14 @@ IkuDrawMana:
     Draw {Value1} cards.
     |When Veiled|: Gain {Mana}.
   FlavorText: |-
-    (~^.^)~
+    Funky dancer --> (~^.^)~
 
 IkuSlowPlay:
   Name: Tempered Fury
   Description: |-
     At the start of {PlayerName}'s turn, if {Value2} or less cards were played last turn, gain {Value1} |Temporary Firepower| and |Spirit|.
   FlavorText: |-
-    No need to attack now ~
-    Why not wait a little bit?
+    Patience is a virtue after all.
 
 IkuCarBattery:
   Name: Jumper Cables
@@ -99,15 +98,19 @@ IkuCarBattery:
     Draw {Value1} cards.
     Gain {Value2} |Surge|.
     |d:Debut: Gain {DebutValue} additional Surge|.
-  FlavorText: mmm yummy car battery
+  FlavorText: Electric shock wakes you up a lot faster than caffeine.
  
 IkuAirDraw:
   Name: Aerial Observer
   Description: |-
-    Discard up to {Value1} cards.
-    Put that many cards with a cost of 1 or less from the draw pile into the hand.
+    Draw {Value1} cards.
+    Veil {Value2} cards from the hand.
+  UpgradedDescription: |-
+    Draw {Value1} cards.
+    Veil between {Value2} to {Value1} cards from the hand.
+  Header: Choose cards to Veil.
   FlavorText: |-
-    Get involved? Interfere? How silly.
+    Quite the view from up here!
 
 IkuGenerator:
   Name: Elekiter Dragon Palace
@@ -116,7 +119,6 @@ IkuGenerator:
   UpgradedDescription: |-
     Gain {Value2} |Surge|.
     At the start of {PlayerName}'s turn, gain {Value1} |Surge|.
-  FlavorText: A rather novel form of electricity generation.
 
 IkuVeilFirst:
   Name: Veils Like Sky
@@ -126,7 +128,7 @@ IkuVeilFirst:
     |Veil| the first card played each turn.
     Add a |Splash| to the hand.
   FlavorText: |-
-    If I were going for accuracy, this would be a graze card.
+    Some may know this as a graze card.
 
 IkuWaterWind:
   Name: Veils Like Water
@@ -134,6 +136,7 @@ IkuWaterWind:
     Deal {Damage} damage.
     Draw {Value1} card{Value1:plural one='' other='s'}.
     |Veil| {Value1} card{Value1:plural one='' other='s'} from the hand.
+  Header: Choose cards to Veil.
   FlavorText: |-
     Don't forget to hydrate!
 
@@ -162,6 +165,7 @@ IkuAnvil:
     Deal {Damage} damage.
     |Veil| up to {Value1} cards from the hand.
     Gain {Value2} |Surge| for each card |Veiled| this way.
+  Header: Choose cards to Veil.
 
 IkuRailgun: 
   Name: Springstorm Railgun
@@ -173,8 +177,8 @@ IkuSmite:
   Name: Smite of the Goddess
   Description: |-
     Deal {Damage} damage.
-    |When Veiled|: Increase {SelfName}'s damage by {Value1} this combat.
-  FlavorText: death.
+    |When {SelfName} enters the hand|: Increase {SelfName}'s damage by {Value1} this combat.
+  FlavorText: Atomized.
 
 IkuSkyBarrier:
   Name: Sky's Domain
@@ -186,6 +190,7 @@ IkuVeilWind:
   Description: |-
     |Veil| {Value1} card{Value1:plural one='' other='s'}. 
     Draw {Value1} card{Value1:plural one='' other='s'}. 
+  Header: Choose cards to Veil.
 
 IkuRedSprite:
   Name: Red Sprite
@@ -210,6 +215,7 @@ IkuReturn:
   Description: |-
     Gain {Block} |Block|. 
     Choose up to {Value1} card{Value1:plural one='' other='s'} in the discard pile to |Veil|.
+  Header: Choose cards to Veil.
 
 IkuShock:
   Name: Thundercloud Stickleback
@@ -230,11 +236,12 @@ IkuVeilTime:
     Draw {Value1} additional cards next turn.
     End {PlayerName}'s turn. Then, take an extra turn.
     |d:Time Limit {Mana}.|
+  Header: Choose cards to Veil.
 
 IkuTenshiFriend:
   Name: Tenshi, Child of Heaven
   Description: "{PassiveCostIcon}Gain {Value2} |Barrier| for each time {PlayerName} lost life last turn."
-  ExtraDescription1: "{ActiveCostIcon}Gain {Value1} |Firepower| and |Spirit|."
+  ExtraDescription1: "{ActiveCostIcon}Gain {Value1} |Firepower| and |Spirit| and draw {Value3} card{Value3:plural one='' other='s'}."
   ExtraDescription3: "{UltimateCostIcon}Add a |Sword of Scarlet Though| to the hand. It hits an additional time for each |Unity| {SelfName} has."
   FlavorText: They don't actually like each other.
 
@@ -261,6 +268,7 @@ IkuUnmovable:
     Gain {Value1} |Graze|.
     |Veil| any number of cards from the hand.
     End {PlayerName}'s turn.
+  FlavorText: Lawn chair not required.
 
 IkuCrash:
   Name: Storm Crasher
@@ -272,6 +280,7 @@ IkuCrash:
     Deal {Damage} damage to each enemy.
     Choose a card in the draw or discard pile.
     Put it on top of the draw pile.
+  Header: Choose card to place on top of the draw pile.
   FlavorText: Use your head!
 
 IkuVeilSelf:
@@ -286,6 +295,7 @@ IkuCycle:
   Description: |-
     Draw {Value1} card{Value1:plural one='' other='s'}.
     |Veil| {Value2} card{Value2:plural one='' other='s'}. {Value2:plural one='It is' other='They are'} placed on the top of the draw pile.
+  Header: Choose card to Veil to the top of the draw pile.
 
 IkuExileStatus:
   Name: Breath of Paradise
@@ -294,6 +304,7 @@ IkuExileStatus:
   UpgradedDescription: |-
     Whenever a Status or Misfortune card is |Veiled|, |Exile| it and draw a card.
     |Veil| any number of cards from the hand.
+  Header: Choose cards to Veil.
 
 IkuTidal:
   Name: Tidal Wave
@@ -312,19 +323,20 @@ IkuFuryStrikes:
   Name: Fish Fillet
   Description: |-
     Deal {Damage} damage {Hits} times.
-    |When Veiled|: Add an |Oarfish Slasher| to the hand. It costs {Mana} and has |Exile|.
+    |When Veiled|: Add an |Fish Fillet| to the hand. It costs {Mana} and has |Exile|.
   UpgradedDescription: |-
     Deal {Damage} damage {Hits} times.
     Gain {Value1} |Surge|.
-    |When Veiled|: Add an |Oarfish Slasher+| to the hand. It costs {Mana} and has |Exile|.
+    |When Veiled|: Add an |Fish Fillet+| to the hand. It costs {Mana} and has |Exile|.
   FlavorText: |-
-    Don't get it twisted, the fish is the one doing the filleting.
+    Fish fillets? I didn't know she knew how!
 
 IkuEcho:
   Name: Resonant Winds
   Description: |-
     Gain {Value2} |Graze|.
     Choose a card in hand to |Veil|. It gains |Echo|.
+  Header: Choose card to Veil.
 
 IkuPressure: 
   Name: Pressure Wave
@@ -339,7 +351,7 @@ IkuJuiced:
   UpgradedDescription: |-
     Whenever an attack card is played in which mana was paid, gain {Mana}.
     Add {Value2} |Red Sprites| to the hand.
-  FlavorText: The Universe has decided; I cannot lose
+  FlavorText: The universe is on my side!
 
 IkuAddVeil:
   Name: Wind Hatchet
@@ -347,7 +359,6 @@ IkuAddVeil:
     Gain {Block} |Block|.
     Deal {Damage} damage.
     Add a |Veils Like Wind| to the hand.
-  FlavorText: chop chop
 
 IkuArmageddon:
   Name: Doomsday Forecast
@@ -360,7 +371,7 @@ IkuArmageddon:
 
 IkuRebound:
   Name: U Current
-  Description: "The next{Value1:plural one=' ' other=' % '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand."
+  Description: "The next{Value1:plural one=' ' other=' % '}card{Value1:plural one=' |Veiled| is' other='s |Veiled| are'} returned to the hand.\n|When Veiled|: Gain {Mana}."
   FlavorText: Like it never left.
 
 IkuArc: 
@@ -387,7 +398,22 @@ IkuFaraday:
     Deal {Damage} damage.
     Draw {Value2} card{Value2:plural one='' other='s'}.
     |Conduit|: This card is played twice.
+  FlavorText: A card so nice you play it twice.
 
+IkuGigaBuff:
+  Name: Dragon God's Divinity
+  Description: |-
+    Double {PlayerName}'s stackable buffs.
+  FlavorText: It's not my fault if this breaks something.
+
+IkuLaidPlan:
+  Name: Slipstream
+  Description: |-
+    At the end of {PlayerName}'s turn, choose up to {Value1} card{Value1:plural one='' other='s'} to |Veil|.
+
+IkuVisitor:
+  Name: Unearthly Visitor
+  Description: At the start of {PlayerName}'s turn, choose to add {Value1:plural one='a' other='% duplicates of either'} |Red Sprite| or |Veils Like Wind| in the hand.
 
 
 
@@ -412,14 +438,12 @@ TrapTest:
   Description: |-
     |Trap Card|: |Triggers| when {PlayerName} is attacked. Targets that enemy.
     |Triggered|: Deal {Damage} damage.
-  FlavorText: Ignore these, they are for testing purposes and are not part of the mod.
 
 ChompTest:
   Name: Grand Chomper
   Description: |-
     |Trap Card|: |Triggers| at the end of the turn. Targets the enemy with the least life by default.
     |Triggered|: If the enemy has {Value1} or less life, defeat it. Increase {SelfName}'s range by {Value2}. 
-  FlavorText: Ignore these, they are for testing purposes and are not part of the mod.
 
 TransformRock:
   Name: Become Rock
@@ -434,3 +458,9 @@ AuraCardTest:
   ExtraDescription1: |-
     |d:Aura: Gain {AuraCount} Temporary Firepower whenever an attack card is played.|
     |When Played|: Increase {SelfName}'s |Temporary Firepower| gain by {Value1}.
+
+TimeTest:
+  Name: The Time Is Now
+  Description: |-
+    Today's date is {Date}. 
+    Draw {Value1} card.

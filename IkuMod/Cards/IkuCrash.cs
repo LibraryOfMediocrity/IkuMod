@@ -40,6 +40,14 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuCrashDef))]
     public sealed class IkuCrash : Card
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return AttackAction(selector);
@@ -55,7 +63,8 @@ namespace IkuMod.Cards
             }
             SelectCardInteraction interaction = new SelectCardInteraction(0, base.Value1, list)
             {
-                Source = this
+                Source = this,
+                Description = Header
             };
             yield return new InteractionAction(interaction, false);
             if (interaction.SelectedCards.Count > 0)

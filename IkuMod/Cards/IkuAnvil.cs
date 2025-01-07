@@ -42,6 +42,14 @@ namespace IkuMod.Cards
         [EntityLogic(typeof(IkuAnvilDef))]
         public sealed class IkuAnvil : Card
         {
+            private string Header
+            {
+                get
+                {
+                    return this.LocalizeProperty("Header");
+                }
+            }
+
             protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
             {
                 yield return AttackAction(selector);
@@ -50,7 +58,8 @@ namespace IkuMod.Cards
                     int surgeCount = 0;
                     SelectHandInteraction interaction = new SelectHandInteraction(0, base.Value1, base.Battle.HandZone)
                     {
-                        Source = this
+                        Source = this,
+                        Description = Header
                     };
                     yield return new InteractionAction(interaction, false);
                     foreach (Card card in interaction.SelectedCards)

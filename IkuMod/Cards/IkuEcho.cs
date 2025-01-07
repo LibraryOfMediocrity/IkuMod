@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace IkuMod.Cards
 {
@@ -43,6 +44,14 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuEchoDef))]
     public sealed class IkuEcho : Card
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
+
         public override Interaction Precondition()
         {
             List<Card> list = base.Battle.HandZone.Where((Card card) => card != this).ToList<Card>();
@@ -50,7 +59,11 @@ namespace IkuMod.Cards
             {
                 return null;
             }
-            return new SelectHandInteraction(base.Value1, base.Value1, list);
+            return new SelectHandInteraction(base.Value1, base.Value1, list)
+            {
+                Source = this,
+                Description = Header
+            };
         }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)

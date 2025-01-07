@@ -41,6 +41,13 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuVeilWindDef))]
     public sealed class IkuVeilWind : Card
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
@@ -49,7 +56,8 @@ namespace IkuMod.Cards
             {
                 SelectHandInteraction interaction = new SelectHandInteraction(base.Value1, base.Value1, base.Battle.HandZone)
                 {
-                    Source = this
+                    Source = this,
+                    Description = Header
                 };
                 yield return new InteractionAction(interaction, false);
                 foreach (Card card in interaction.SelectedCards)

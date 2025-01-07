@@ -25,7 +25,7 @@ namespace IkuMod.Cards
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Red = 3 };
             config.UpgradedCost = new ManaGroup() { Red = 1 };
-            config.Value1 = 3;
+            config.Value1 = 4;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuSurgeSe" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

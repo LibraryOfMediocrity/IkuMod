@@ -24,6 +24,7 @@ namespace IkuMod.Cards
             config.Rarity = Rarity.Rare;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Any = 2, Red = 3 };
+            config.UpgradedCost = new ManaGroup() { Red = 3 };
             config.Mana = new ManaGroup() { Philosophy = 1 };
             config.Value1 = 1;
             config.Value2 = 2;

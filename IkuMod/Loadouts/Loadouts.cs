@@ -52,7 +52,7 @@ namespace IkuMod.Loadouts
             DeckA: IkuLoadouts.DeckA,
             DeckB: IkuLoadouts.DeckB,
             DifficultyA: 2,
-            DifficultyB: 2
+            DifficultyB: 1
         );
     }
 }

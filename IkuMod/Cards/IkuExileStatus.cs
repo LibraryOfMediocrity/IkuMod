@@ -41,6 +41,14 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuExileStatusDef))]
     public sealed class IkuExileStatus : Card
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return BuffAction<IkuExileStatusSe>(base.Value1, 0, 0, 0, 0.2f);
@@ -48,7 +56,8 @@ namespace IkuMod.Cards
             {
                 SelectHandInteraction interaction = new SelectHandInteraction(0, 100, base.Battle.HandZone)
                 {
-                    Source = this
+                    Source = this,
+                    Description = Header
                 };
                 yield return new InteractionAction(interaction, false);
                 foreach (Card card in interaction.SelectedCards)

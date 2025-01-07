@@ -1,7 +1,13 @@
-IkuSurgeSe:
+IkuSurgeSeOld:
   Name: Surge
   Description: |-
     The next {Level} attack card{Level:plural one='' other='s'} played deal 50% more damage.
+  Brief: Played attack cards deal 50% more damage. Lose 1 Surge when an attack card is played.
+
+IkuSurgeSe:
+  Name: Surge
+  Description: |-
+    Attack cards deal 50% more damage for the next {Level} attack card{Level:plural one='' other='s'} played.
   Brief: Played attack cards deal 50% more damage. Lose 1 Surge when an attack card is played.
 
 IkuVeilDisc:
@@ -60,7 +66,7 @@ IkuJuicedSe:
 IkuArmageddonSe:
   Name: Doomsday Forecast
   Description: |-
-    At the start of {PlayerName}'s next turn{Level:plural one='' other='s'}: gain {Num} |Surge|, gain {Mana} and put {Num} random attack cards from the draw pile into the hand.
+    At the start of {PlayerName}'s next turn{Level:plural one='' other='s'}, gain {Num} |Surge|, gain {Mana} and put {Num} random attack cards from the draw pile into the hand.
 
 IkuReboundSe:
   Name: Rebound
@@ -76,6 +82,16 @@ IkuArcSe:
   Name: Arc Lightning
   Description: |-
     Attack cards deal {Level} more damage when {PlayerName} has surge.
+
+IkuLaidPlanSe:
+  Name: Slipstream
+  Description: At the end of the turn, choose {Level} card{Level:plural one='' other's'} to |Veil|.
+  Header: Choose cards to Veil.
+
+IkuVisitorSe:
+  Name: Unearthly Visitor
+  Description: At the start of {PlayerName}'s turn, you may add {Level:plural one='a' other='% dulicates of either'} |Red Sprite| or |Veils Like Wind| in the hand. 
+  Header: Choose card to add to hand.
 
 
 

@@ -50,10 +50,10 @@ namespace IkuMod.Cards
 
             private IEnumerable<BattleAction> OnCardUsing(CardUsingEventArgs args)
             {
-                UnityEngine.Debug.Log("Activated cardusing: " + args.Card.Name);
+                //UnityEngine.Debug.Log("Activated cardusing: " + args.Card.Name);
                 if (args.Card == this && Triggered)
                 {
-                    UnityEngine.Debug.Log("Successfully activated playtwice");
+                    //UnityEngine.Debug.Log("Successfully activated playtwice");
                     IkuSurgeSe status = base.Battle.Player.GetStatusEffect<IkuSurgeSe>();
                     args.PlayTwice = true;
                     status.SurgeUsed();

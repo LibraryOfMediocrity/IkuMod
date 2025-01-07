@@ -51,6 +51,13 @@ namespace IkuMod.Cards
     {
         public int TimesHit { get; set; } = 0;
         public int TimesHitLast { get; set; } = 0;
+        public int Value3 
+        { 
+            get
+            {
+                return IsUpgraded?2:1;
+            }
+        }
 
         protected override void OnEnterBattle(BattleController battle)
         {
@@ -155,6 +162,7 @@ namespace IkuMod.Cards
                 base.Loyalty += base.UltimateCost;
                 yield return BuffAction<Firepower>(base.Value1);
                 yield return BuffAction<Spirit>(base.Value1);
+                yield return new DrawManyCardAction(Value3);
                 yield return base.SkillAnime;
             }
             yield break;

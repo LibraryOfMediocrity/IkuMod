@@ -46,11 +46,20 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuVeilTimeDef))]
     public sealed class IkuVeilTime : LimitedStopTimeCard
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             SelectHandInteraction interaction = new SelectHandInteraction(0, 100, base.Battle.HandZone)
             {
-                Source = this
+                Source = this,
+                Description = Header
             };
             yield return new InteractionAction(interaction, false);
             foreach (Card card in interaction.SelectedCards)

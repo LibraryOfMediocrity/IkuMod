@@ -44,6 +44,14 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuReturnDef))]
     public sealed class IkuReturn : Card
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return new CastBlockShieldAction(base.Battle.Player, base.Block);
@@ -51,7 +59,8 @@ namespace IkuMod.Cards
             {
                 SelectCardInteraction interaction = new SelectCardInteraction(0, base.Value1, base.Battle.DiscardZone)
                 {
-                    Source = this
+                    Source = this,
+                    Description = Header
                 };
                 yield return new InteractionAction(interaction, false);
                 if (interaction.SelectedCards.Count > 0)

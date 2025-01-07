@@ -39,18 +39,27 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuCycleDef))]
     public sealed class IkuCycle : Card
     {
+        private string Header
+        {
+            get
+            {
+                return this.LocalizeProperty("Header");
+            }
+        }
+
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return new DrawManyCardAction(base.Value1);
             SelectHandInteraction interaction = new SelectHandInteraction(base.Value2, base.Value2, base.Battle.HandZone)
             {
-                Source = this
+                Source = this,
+                Description = Header
             };
             yield return new InteractionAction(interaction, false);
             foreach (Card card in interaction.SelectedCards)
             {
                 yield return new VeilCardAction(card);
-                yield return new MoveCardToDrawZoneAction(card, DrawZoneTarget.Top);
+                if(card.Zone == CardZone.Draw) yield return new MoveCardToDrawZoneAction(card, DrawZoneTarget.Top);
             }
             yield break;
         }

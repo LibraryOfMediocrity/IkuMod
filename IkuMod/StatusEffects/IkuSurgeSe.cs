@@ -22,12 +22,13 @@ namespace IkuMod.StatusEffects
     [EntityLogic(typeof(IkuSurgeSeDef))]
     public sealed class IkuSurgeSe : StatusEffect
     {
-        //mess with damage rate for balance -> 1.25f
-        //find scaling through other means like firepower
+        //CURRENTLY RIGGED TO BUFF ALL ATTACK CARDS WHILE ACTIVE
+        //changed due to follow-ups potions and knives making precalculation weird
+        //may change, may not
+
         public float DamageRate { get; set; } = 1.5f;
         public bool cardUsing = false;
-        public Card used;
-        public bool added;
+        //public Card used;
 
         protected override void OnAdded(Unit unit)
         {
@@ -41,7 +42,7 @@ namespace IkuMod.StatusEffects
             if (args.DamageInfo.DamageType == DamageType.Attack)
             {
                 Card card = args.ActionSource as Card;
-                if (card != null && card.CardType == CardType.Attack && cardUsing && card == used)
+                if (card != null && card.CardType == CardType.Attack /*&& cardUsing && card == used*/)
                 {
                     args.DamageInfo = args.DamageInfo.MultiplyBy(this.DamageRate);
                     args.AddModifier(this);
@@ -53,16 +54,18 @@ namespace IkuMod.StatusEffects
                 }
             }
         }
+        
         private IEnumerable<BattleAction> OnCardUsing(CardUsingEventArgs args)
         {
             if (args.Card.CardType == CardType.Attack)
             {
                 cardUsing = true;
                 this.NotifyActivating();
-                used = args.Card;
+                //used = args.Card;
             }
             yield break;
         }
+        
         private IEnumerable<BattleAction> OnCardUsed(CardUsingEventArgs args)
         {
             if (cardUsing)

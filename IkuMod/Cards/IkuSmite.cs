@@ -40,20 +40,38 @@ namespace IkuMod.Cards
         [EntityLogic(typeof(IkuSmiteDef))]
         public sealed class IkuSmite : Card
         {
-            protected override void OnEnterBattle(BattleController battle)
+
+            private int EnterCount;
+
+            public override IEnumerable<BattleAction> OnDraw()
             {
-                base.ReactBattleEvent<VeilCardEventArgs>(CustomGameEventManager.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+                return this.OnEnterHand();
             }
 
-            private int Veilcount;
-
-            private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)
+            public override IEnumerable<BattleAction> OnMove(CardZone srcZone, CardZone dstZone)
             {
-                if (args.Card == this) Veilcount++;
+                if (dstZone != CardZone.Hand)
+                {
+                    return null;
+                }
+                return this.OnEnterHand();
+            }
+
+            protected override void OnEnterBattle(BattleController battle)
+            {
+                if (base.Zone == CardZone.Hand)
+                {
+                    base.React(this.OnEnterHand());
+                }
+            }
+
+            private IEnumerable<BattleAction> OnEnterHand()
+            {
+                EnterCount++;
                 yield break;
             }
 
-            public override int AdditionalDamage => base.Value1 * Veilcount;
+            public override int AdditionalDamage => base.Value1 * EnterCount;
 
             protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
             {

@@ -24,7 +24,7 @@ namespace IkuMod.Cards
             config.Rarity = Rarity.Uncommon;
             config.Type = CardType.Attack;
             config.HideMesuem = false;
-            config.Damage = 16;
+            config.Damage = 18;
             config.UpgradedDamage = 24;
             config.TargetType = TargetType.SingleEnemy;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
@@ -45,7 +45,7 @@ namespace IkuMod.Cards
         }
 
         bool killed = false;
-
+        
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             yield return base.AttackAction(selector);
