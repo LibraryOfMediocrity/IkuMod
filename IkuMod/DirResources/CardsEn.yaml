@@ -415,6 +415,12 @@ IkuVisitor:
   Name: Unearthly Visitor
   Description: At the start of {PlayerName}'s turn, choose to add {Value1:plural one='a' other='% duplicates of either'} |Red Sprite| or |Veils Like Wind| in the hand.
 
+IkuKinetic:
+  Name: Kinetic Cannon
+  Description: |-
+    |Exile| all other attack cards in hand. For each card |Exiled| this way, gain {Block} |Block| and increase {SelfName}'s damage by {Value1} this combat.
+    Deal {Damage} damage.
+
 
 
 Note: All card descriptions beyond this point are for experimental cards and do not need translations

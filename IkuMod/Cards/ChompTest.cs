@@ -38,11 +38,8 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(ChompTestDef))]
     public sealed class ChompTest : TrapCardTest
     {
-        public override Unit[] DefaultTarget()
-        {
-            
-            return SelectUnit(TrapSelector.LeastLife);
-        }
+        public override Unit[] DefaultTarget => SelectUnit(TrapSelector.LeastLife);
+        
 
         protected override void OnEnterBattle(BattleController battle)
         {
@@ -57,15 +54,15 @@ namespace IkuMod.Cards
                 Debug.Log("Turn Ending reacted");
 
                 this.NotifyActivating();
-                if (DefaultTarget().Length == 1)
+                if (DefaultTarget.Length == 1)
                 {
-                    EnemyUnit enemyUnit = (EnemyUnit)DefaultTarget()[0];
+                    EnemyUnit enemyUnit = (EnemyUnit)DefaultTarget[0];
                     //these checks are unnecessary but I cant be bothered to remove them
                     if (enemyUnit != null && enemyUnit.IsAlive)
                     {
                         //iterate through TrapTriggered results and return them immediately so effects happen immediately
                         //instead of waiting for the actions to be iterated through later
-                        var BattleActions = this.TrapTriggered(DefaultTarget());
+                        var BattleActions = this.TrapTriggered(DefaultTarget);
                         foreach (var action in BattleActions)
                         {
                             yield return action;
@@ -77,9 +74,9 @@ namespace IkuMod.Cards
                 else
                 {
                     Debug.Log("Aoe Turn Ending");
-                    EnemyUnit[] enemyUnits = new EnemyUnit[DefaultTarget().Length];
+                    EnemyUnit[] enemyUnits = new EnemyUnit[DefaultTarget.Length];
                     int i = 0;
-                    foreach (EnemyUnit enemyUnit in (EnemyUnit[])DefaultTarget())
+                    foreach (EnemyUnit enemyUnit in (EnemyUnit[])DefaultTarget)
                     {
                         //these checks are unnecessary but I cant be bothered to remove them
                         if (enemyUnit != null || enemyUnit.IsAlive)

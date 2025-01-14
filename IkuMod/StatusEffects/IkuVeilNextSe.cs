@@ -73,7 +73,7 @@ namespace IkuMod.StatusEffects
             bool valid;
             
             valid = args.Card != null && args.Card.Zone != CardZone.None && args.Card != card && args.Card.Zone != CardZone.Exile && !args.Card.Summoning
-                && args.Card.CardType != LBoL.Base.CardType.Ability && args.Card.CardType != LBoL.Base.CardType.Tool;
+                && args.Card.CardType != LBoL.Base.CardType.Ability && args.Card.CardType != LBoL.Base.CardType.Tool && args.Card.Zone != CardZone.Hand;
             return valid;
         }
     }

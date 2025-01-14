@@ -14,10 +14,7 @@ namespace IkuMod.Cards.Template
 {
     public abstract class TrapCardTest : Card
     {
-        public virtual Unit[] DefaultTarget()
-        { 
-            return SelectUnit(TrapSelector.RandomEnemy);
-        }
+        public virtual Unit[] DefaultTarget => SelectUnit(TrapSelector.RandomEnemy);
 
         public abstract IEnumerable<BattleAction> TrapTriggered(Unit[] unit);
 

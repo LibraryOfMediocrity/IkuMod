@@ -28,9 +28,10 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.SingleEnemy;
             config.Cost = new ManaGroup() { White = 1, Red = 1 };
             config.UpgradedCost = new ManaGroup() { Any = 1, Hybrid = 1, HybridColor = 2 };
-            config.Damage = 3;
+            config.Damage = 2;
+            config.UpgradedDamage = 4;
             config.Keywords = Keyword.Accuracy | Keyword.Exile;
-            config.UpgradedKeywords = Keyword.Accuracy;
+            config.UpgradedKeywords = Keyword.Accuracy | Keyword.Exile;
             config.RelativeEffects = new List<string>() { "Electric" };
             config.UpgradedRelativeEffects = new List<string>() { "Electric" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
