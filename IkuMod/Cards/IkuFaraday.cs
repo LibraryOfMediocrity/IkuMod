@@ -29,8 +29,8 @@ namespace IkuMod.Cards
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Any = 1, Red = 1 };
             config.UpgradedCost = new ManaGroup() { Red = 1 };
-            config.Damage = 10;
-            config.UpgradedDamage = 12;
+            config.Damage = 5;
+            config.UpgradedDamage = 6;
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
             config.Value2 = 1;
@@ -75,10 +75,15 @@ namespace IkuMod.Cards
                 }
             }
 
+            public int HitTimes { get => 2; }
+
             protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
             {
                 yield return BuffAction<Graze>(base.Value1);
-                yield return AttackAction(selector);
+                for (int i = 0; i < HitTimes; i++)
+                {
+                    yield return AttackAction(selector);
+                }
                 yield return new DrawManyCardAction(base.Value2);
                 yield break;
             }

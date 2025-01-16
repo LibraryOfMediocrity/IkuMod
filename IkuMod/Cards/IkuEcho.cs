@@ -4,6 +4,7 @@ using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Battle.Interactions;
 using LBoL.Core.Cards;
 using LBoL.Core.StatusEffects;
@@ -77,7 +78,9 @@ namespace IkuMod.Cards
                     foreach (Card card in cards)
                     {
                         yield return new VeilCardAction(card);
-                        card.IsEcho = true;
+                        Card card1 = card.CloneBattleCard();
+                        card1.IsExile = true;
+                        yield return new AddCardsToHandAction(card1);
                     }
                 }
             }

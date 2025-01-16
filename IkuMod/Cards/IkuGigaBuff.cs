@@ -24,6 +24,7 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.Self;
             config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Blue, ManaColor.Red };
             config.Cost = new ManaGroup() { White = 1, Blue = 1, Red = 1 };
+            config.Value1 = 5;
             config.UpgradedKeywords = Keyword.Retain;
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;
@@ -35,6 +36,7 @@ namespace IkuMod.Cards
     {
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
+            yield return SacrificeAction(base.Value1);
             var statusEffect = base.Battle.Player.StatusEffects;
             foreach (StatusEffect status in statusEffect)
             {

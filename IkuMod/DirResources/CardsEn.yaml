@@ -335,8 +335,9 @@ IkuEcho:
   Name: Resonant Winds
   Description: |-
     Gain {Value2} |Graze|.
-    Choose a card in hand to |Veil|. It gains |Echo|.
-  Header: Choose card to Veil.
+    Choose a card in hand to |Veil|. 
+    Add a |Copy| of that card with |Exile| to the hand.
+  Header: Choose card to Veil and Copy.
 
 IkuPressure: 
   Name: Pressure Wave
@@ -382,7 +383,8 @@ IkuArc:
 IkuNimble:
   Name: Nimble Oarfish
   Description: |-
-    Deal {Damage} damage {Value1} times.
+    Gain {Value1} |Surge|.
+    Draw {Value1} card{Value1:plural one='' other='s'}.
     {Value2:plural one='% random card' other='% random cards'} in the hand |temporarily cost{Value2:plural one='s' other=''}| {Mana} less. Prioritizes attack cards.
 
 IkuTailwind:
@@ -395,7 +397,7 @@ IkuFaraday:
   Name: Faraday Cage
   Description: |-
     Gain {Value1} |Graze|.
-    Deal {Damage} damage.
+    Deal {Damage} damage {HitTimes} times.
     Draw {Value2} card{Value2:plural one='' other='s'}.
     |Conduit|: This card is played twice.
   FlavorText: A card so nice you play it twice.
@@ -403,6 +405,7 @@ IkuFaraday:
 IkuGigaBuff:
   Name: Dragon God's Divinity
   Description: |-
+    Lose {Value1} life.
     Double {PlayerName}'s stackable buffs.
   FlavorText: It's not my fault if this breaks something.
 
@@ -421,6 +424,27 @@ IkuKinetic:
     |Exile| all other attack cards in hand. For each card |Exiled| this way, gain {Block} |Block| and increase {SelfName}'s damage by {Value1} this combat.
     Deal {Damage} damage.
 
+IkuDischarge:
+  Name: Discharge
+  Description: |-
+    Gain {Block} |Block|.
+    Gain {SurgeCount} |Surge|.
+    Gain 1 less |Surge| for each card played this turn.
+  FlavorText: Let it all out.
+
+IkuDefensive:
+  Name: Offensive Defense
+  Description: The next {Value1:plural one='attack card' other='% attack cards'} played this turn give{Value1:plural one='s' other=''} |Block| equal to damage dealt.
+  
+IkuOcean:
+  Name: Ocean of Clouds
+  Description: Whenever 4 cards are played in a turn, draw {Value1} card{Value1:plural one='' other='s'}.
+
+IkuJudgement:
+  Name: Divine Judgement
+  Description: |-
+    Deal {Damage} damage.
+    {SelfName}'s damage is equal to half the target's max health.
 
 
 Note: All card descriptions beyond this point are for experimental cards and do not need translations

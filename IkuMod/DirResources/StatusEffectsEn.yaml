@@ -93,6 +93,14 @@ IkuVisitorSe:
   Description: At the start of {PlayerName}'s turn, you may add {Level:plural one='a' other='% dulicates of either'} |Red Sprite| or |Veils Like Wind| in the hand. 
   Header: Choose card to add to hand.
 
+IkuDefensiveSe:
+  Name: Offensive Defense
+  Description: The next {Level:plural one='attack card' other='% attack cards'} played this turn give{Level:plural one='s' other=''} |Block| equal to damage dealt.
+
+IkuOceanSe:
+  Name: Ocean of Clouds
+  Description: Whenever 4 cards are played in a turn, draw {Level} card{Level:plural one='' other='s'}.
+
 
 
 Note: All status descriptions beyond this point are for experimental statuses and do not need translations
