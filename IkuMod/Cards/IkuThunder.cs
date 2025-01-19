@@ -27,12 +27,12 @@ namespace IkuMod.Cards
             config.Type = CardType.Attack;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Red = 2 };
-            config.Damage = 14;
-            config.UpgradedDamage = 16;
+            config.Block = 14;
+            config.UpgradedBlock = 18;
             config.Value1 = 1;
-            config.Value2 = 2;
-            config.UpgradedValue2 = 3;
-            config.TargetType = TargetType.SingleEnemy;
+            config.UpgradedValue1 = 2;
+            config.RelativeKeyword = Keyword.Block;
+            config.UpgradedRelativeKeyword = Keyword.Block;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuSurgeSe" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
@@ -47,18 +47,14 @@ namespace IkuMod.Cards
         {
             get
             {
-                return base.Battle != null && base.Battle.BattleCardUsageHistory.Count != 0 && base.Battle.BattleCardUsageHistory.Last<Card>().Config.Type.Equals(CardType.Defense);
+                return base.Battle != null && base.Battle.BattleCardUsageHistory.Count != 0 && base.Battle.BattleCardUsageHistory.Last<Card>().Config.Type != CardType.Attack;
             }
         }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
-            yield return base.AttackAction(selector);
+            yield return base.DefenseAction();
             if (PlayInTriggered)
-            {
-                yield return BuffAction<IkuSurgeSe>(base.Value2, 0, 0, 0, 0.2f);
-            }
-            else
             {
                 yield return BuffAction<IkuSurgeSe>(base.Value1, 0, 0, 0, 0.2f);
             }

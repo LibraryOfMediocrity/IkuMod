@@ -24,7 +24,7 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.Self;
             config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Blue, ManaColor.Red };
             config.Cost = new ManaGroup() { White = 1, Blue = 1, Red = 1 };
-            config.Value1 = 5;
+            config.Value1 = 3;
             config.UpgradedKeywords = Keyword.Retain;
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;

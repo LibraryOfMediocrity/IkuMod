@@ -41,8 +41,6 @@ namespace IkuMod.Cards
         public sealed class IkuSmite : Card
         {
 
-            private int EnterCount;
-
             public override IEnumerable<BattleAction> OnDraw()
             {
                 return this.OnEnterHand();
@@ -67,11 +65,9 @@ namespace IkuMod.Cards
 
             private IEnumerable<BattleAction> OnEnterHand()
             {
-                EnterCount++;
+                base.DeltaDamage += base.Value1;
                 yield break;
             }
-
-            public override int AdditionalDamage => base.Value1 * EnterCount;
 
             protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
             {

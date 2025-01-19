@@ -24,6 +24,7 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.Self;
             config.Cost = new ManaGroup() { Any = 2, Red = 1 };
             config.Block = 18;
+            config.UpgradedBlock = 24;
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
             config.RelativeKeyword = Keyword.Block;

@@ -32,9 +32,8 @@ namespace IkuMod.Cards
             config.Value2 = 1;
             config.Value1 = 1;
             config.TargetType = TargetType.Self;
-            config.RelativeKeyword = Keyword.Echo;
-            config.UpgradedRelativeKeyword = Keyword.Echo;
-            config.UpgradedKeywords = Keyword.Replenish;
+            config.Keywords = Keyword.Exile | Keyword.Echo | Keyword.Replenish;
+            config.UpgradedKeywords = Keyword.Exile | Keyword.Echo | Keyword.Replenish;
             config.RelativeEffects = new List<string>() { "Graze", "IkuVeilDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "Graze", "IkuVeilDisc" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

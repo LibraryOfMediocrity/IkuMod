@@ -3,6 +3,7 @@ using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
 using LBoLEntitySideloader.Attributes;
 using System;
@@ -27,6 +28,7 @@ namespace IkuMod.Cards
             config.UpgradedDamage = 20;
             config.Value1 = 8;
             config.UpgradedValue1 = 10;
+            config.Value2 = 2;
             config.TargetType = TargetType.SingleEnemy;
             config.Keywords = Keyword.Grow | Keyword.Accuracy;
             config.UpgradedKeywords = Keyword.Grow | Keyword.Accuracy;
@@ -42,7 +44,7 @@ namespace IkuMod.Cards
             protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
             {
                 yield return AttackAction(selector);
-                
+                yield return new DrawManyCardAction(base.Value2);
                 yield break;
             }
         }

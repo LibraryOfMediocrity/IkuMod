@@ -143,9 +143,8 @@ IkuWaterWind:
 IkuThunder:
   Name: Thunder Breaker
   Description: |-
-    Deal {Damage} damage.
-    Gain {Value1} |Surge|.
-    If the last card played this turn was a Defense card, gain {Value2} |Surge| instead.
+    Gain {Block} |Block|.
+    If the last card played this turn was not an attack card, gain {Value2} |Surge|.
 
 IkuDragonDrill:
   Name: Dragonfish Drill
@@ -171,7 +170,8 @@ IkuRailgun:
   Name: Springstorm Railgun
   Description: |-
     Deal {Damage} damage.
-    |Growth|: {SelfName} deals {Value1} more damage this combat.
+    Draw {Value2} cards.
+    |Growth|: Increase damage by {Value1}.
 
 IkuSmite:
   Name: Smite of the Goddess
@@ -445,6 +445,29 @@ IkuJudgement:
   Description: |-
     Deal {Damage} damage.
     {SelfName}'s damage is equal to half the target's max health.
+
+IkuSurgeSlam:
+  Name: Gigawatt Haymaker
+  Description: |-
+    Deal {Damage} damage.
+    Deal {Value1} additional damage for each |Surge| {PlayerName} has.
+
+IkuSwift:
+  Name: Swift Current
+  Description: |-
+    Put the top {Value1} cards of the discard pile into the hand.
+
+IkuOverclock:
+  Name: Overclock
+  Description: |-
+    Each enemy takes damage equal to {Value2} times {PlayerName}'s |Surge|.
+    If there are no attack cards in hand, draw {Value1} cards.
+
+IkuRamp:
+  Name: Charge Acceleration
+  Description: |-
+    Gain {Value1} |Surge|.
+    |Growth|: Gain {Value2} additional |Surge|.
 
 
 Note: All card descriptions beyond this point are for experimental cards and do not need translations

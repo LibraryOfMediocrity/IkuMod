@@ -29,9 +29,9 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Any = 2, White = 1 };
             config.Block = 10;
             config.Damage = 10;
-            config.UpgradedDamage = 20;
+            config.UpgradedDamage = 15;
             config.Value1 = 10;
-            config.UpgradedValue1 = 20;
+            config.UpgradedValue1 = 15;
             config.Keywords = Keyword.Accuracy;
             config.UpgradedKeywords = Keyword.Accuracy;
             config.RelativeKeyword = Keyword.Block | Keyword.Exile;
@@ -44,14 +44,11 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuKineticDef))]
     public sealed class IkuKinetic : Card
     {
-        private int cardCount = 0;
-
-        public override int AdditionalDamage => base.Value1 * cardCount;
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
             Card[] cards = base.Battle.HandZone.Where((Card card) => card.CardType == CardType.Attack && card != this).ToArray();
-            cardCount += cards.Length;
+            base.DeltaDamage += base.Value1 * cards.Length;
             int blockTimes = cards.Length;
             yield return new ExileManyCardAction(cards);
             for (int i = 0; i < blockTimes; i++)
