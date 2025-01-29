@@ -44,6 +44,7 @@ namespace IkuMod.StatusEffects
 
         private IEnumerable<BattleAction> OnTurnStarted(UnitEventArgs args)
         {
+            this.NotifyActivating();
             Card[] array = new Card[2];
             array[0] = Library.CreateCard<IkuRedSprite>();
             array[1] = Library.CreateCard<IkuVeilWind>();

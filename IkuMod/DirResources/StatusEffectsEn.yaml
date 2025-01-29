@@ -101,6 +101,10 @@ IkuOceanSe:
   Name: Ocean of Clouds
   Description: Whenever 4 cards are played in a turn, draw {Level} card{Level:plural one='' other='s'}.
 
+IkuFaradaySe:
+ Name: Faraday Cage
+ Description: Whenever an attack card is played, increase its base damage by {Level} for the rest of combat.
+
 
 
 Note: All status descriptions beyond this point are for experimental statuses and do not need translations
@@ -111,3 +115,10 @@ AuraDisc:
     This card is not discarded when played and will provide a continuous effect while in hand this turn.
   Brief: |-
     This card is not discarded when played and will provide a continuous effect while in hand this turn.
+
+TestGrace:
+  Name: Divine Favor
+  Description: '|Divine Favor| counts as |Firepower| and |Spirit|, and wears off whenever
+    either a card is played or the |Spell Card| is activated.'
+  Brief: '|Divine Favor| counts as |Firepower| and |Spirit|, and wears off whenever
+    either a card is played or the |Spell Card| is activated.'

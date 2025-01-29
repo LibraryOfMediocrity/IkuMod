@@ -44,6 +44,7 @@ namespace IkuMod.StatusEffects
         {
             if (base.Battle.HandZone.Count > 0 && !base.Battle.BattleShouldEnd)
             {
+                this.NotifyActivating();
                 SelectCardInteraction interaction = new SelectCardInteraction(0, base.Level, base.Battle.HandZone)
                 {
                     Source = this,

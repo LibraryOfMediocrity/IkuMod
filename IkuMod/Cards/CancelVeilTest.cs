@@ -36,7 +36,7 @@ namespace IkuMod.Cards
     {
         protected override void OnEnterBattle(BattleController battle)
         {
-            base.ReactBattleEvent<VeilCardEventArgs>(CustomGameEventManager.PreVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+            base.ReactBattleEvent<VeilCardEventArgs>(IkuGameEvents.PreVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
             //UnityEngine.Debug.Log("Card Entered Battle");
         }
 

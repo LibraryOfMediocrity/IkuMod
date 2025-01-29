@@ -26,13 +26,14 @@ namespace IkuMod.StatusEffects
     {
         protected override void OnAdded(Unit unit)
         {
-            base.ReactOwnerEvent<VeilCardEventArgs>(CustomGameEventManager.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+            base.ReactOwnerEvent<VeilCardEventArgs>(IkuGameEvents.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
 
         private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)
         {
             if (args.Card.CardType == CardType.Attack)
             {
+                this.NotifyActivating();
                 yield return BuffAction<IkuSurgeSe>(base.Level, 0, 0, 0, 0.2f);
             }
             yield break;

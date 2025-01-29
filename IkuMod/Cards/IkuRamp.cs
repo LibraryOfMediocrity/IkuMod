@@ -6,9 +6,7 @@ using LBoL.Core;
 using LBoL.Core.Battle;
 using LBoL.Core.Cards;
 using LBoLEntitySideloader.Attributes;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace IkuMod.Cards
 {

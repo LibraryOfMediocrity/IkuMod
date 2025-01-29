@@ -42,7 +42,7 @@ namespace IkuMod.Cards
     {
         protected override void OnEnterBattle(BattleController battle)
         {
-            base.ReactBattleEvent<VeilCardEventArgs>(CustomGameEventManager.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+            base.ReactBattleEvent<VeilCardEventArgs>(IkuGameEvents.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
 
         private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)

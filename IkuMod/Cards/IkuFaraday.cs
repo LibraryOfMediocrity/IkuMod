@@ -23,17 +23,14 @@ namespace IkuMod.Cards
         public override CardConfig MakeConfig()
         {
             CardConfig config = GetCardDefaultConfig();
-            config.Type = CardType.Attack;
-            config.TargetType = TargetType.SingleEnemy;
-            config.Rarity = Rarity.Uncommon;
-            config.Colors = new List<ManaColor>() { ManaColor.Red };
-            config.Cost = new ManaGroup() { Any = 1, Red = 1 };
-            config.UpgradedCost = new ManaGroup() { Red = 1 };
-            config.Damage = 5;
-            config.UpgradedDamage = 6;
+            config.Type = CardType.Ability;
+            config.Rarity = Rarity.Rare;
+            config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.Red };
+            config.Cost = new ManaGroup() { Blue = 1, Red = 1 };
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
-            config.Value2 = 1;
+            config.Keywords = Keyword.Initial;
+            config.UpgradedKeywords = Keyword.Initial;
             config.RelativeEffects = new List<string>() { "Graze" };
             config.UpgradedRelativeEffects = new List<string>() { "Graze" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
@@ -43,48 +40,10 @@ namespace IkuMod.Cards
         [EntityLogic(typeof(IkuFaradayDef))]
         public sealed class IkuFaraday : Card
         {
-            protected override void OnEnterBattle(BattleController battle)
-            {
-                base.ReactBattleEvent<CardUsingEventArgs>(base.Battle.CardUsing, new EventSequencedReactor<CardUsingEventArgs>(this.OnCardUsing));
-            }
-
-            private IEnumerable<BattleAction> OnCardUsing(CardUsingEventArgs args)
-            {
-                //UnityEngine.Debug.Log("Activated cardusing: " + args.Card.Name);
-                if (args.Card == this && Triggered)
-                {
-                    //UnityEngine.Debug.Log("Successfully activated playtwice");
-                    IkuSurgeSe status = base.Battle.Player.GetStatusEffect<IkuSurgeSe>();
-                    args.PlayTwice = true;
-                    status.SurgeUsed();
-                    args.AddModifier(this);
-                }
-                yield break;
-            }
-
-            public override bool Triggered
-            {
-                get
-                {
-                    if (base.Battle.Player.HasStatusEffect<IkuSurgeSe>())
-                    {
-                        IkuSurgeSe status = base.Battle.Player.GetStatusEffect<IkuSurgeSe>();
-                        return base.Battle != null && status.Level > 1;
-                    }
-                    return false;
-                }
-            }
-
-            public int HitTimes { get => 2; }
 
             protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
             {
-                yield return BuffAction<Graze>(base.Value1);
-                for (int i = 0; i < HitTimes; i++)
-                {
-                    yield return AttackAction(selector);
-                }
-                yield return new DrawManyCardAction(base.Value2);
+                yield return BuffAction<IkuFaradaySe>(base.Value1);
                 yield break;
             }
         }

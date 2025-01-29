@@ -15,10 +15,7 @@ namespace IkuMod.Cards
 {
     public sealed class IkuThunderDef : IkuCardTemplate
     {
-        public override bool UseDefault
-        {
-            get { return true; }
-        }
+        public override bool UseDefault => true;
 
         public override CardConfig MakeConfig()
         {

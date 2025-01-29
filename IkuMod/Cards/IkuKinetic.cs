@@ -49,6 +49,7 @@ namespace IkuMod.Cards
         {
             Card[] cards = base.Battle.HandZone.Where((Card card) => card.CardType == CardType.Attack && card != this).ToArray();
             base.DeltaDamage += base.Value1 * cards.Length;
+            this.NotifyChanged();
             int blockTimes = cards.Length;
             yield return new ExileManyCardAction(cards);
             for (int i = 0; i < blockTimes; i++)

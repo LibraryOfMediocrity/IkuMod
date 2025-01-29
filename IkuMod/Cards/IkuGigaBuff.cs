@@ -42,11 +42,8 @@ namespace IkuMod.Cards
             {
                 if (status != null && status.Type == StatusEffectType.Positive && status.IsStackable && (status.HasLevel || status.HasDuration))
                 {
-                    Type type = status.GetType();
-                    int level = 0, duration = 0;
-                    if (status.HasLevel) level = status.Level;
-                    if (status.HasDuration) duration = status.Duration;
-                    yield return BuffAction(type: type, level: level, duration: duration, limit: status.Limit, count: 0);
+                    if (status.HasLevel) status.Level *= 2;
+                    if (status.HasDuration) status.Duration *= 2;
                 }
             }
             yield break;

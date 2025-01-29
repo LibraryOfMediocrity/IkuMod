@@ -79,6 +79,7 @@ namespace IkuMod.StatusEffects
                 int damageInfo = (int)args.DamageInfo.Damage;
                 if (damageInfo > 0f)
                 {
+                    this.NotifyActivating(); 
                     yield return new CastBlockShieldAction(Owner, damageInfo, 0, BlockShieldType.Direct, false);
                 }
             }

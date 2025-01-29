@@ -38,9 +38,13 @@ namespace IkuMod.Cards
     {
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
         {
+            
             for (int i = 0; i < base.Value1; i++)
             {
-                yield return new MoveCardAction(base.Battle.DiscardZone.Last<Card>(), CardZone.Hand);
+                if (base.Battle.DiscardZone.Count > 0)
+                {
+                    yield return new MoveCardAction(base.Battle.DiscardZone.Last<Card>(), CardZone.Hand);
+                }
             }
             yield break;
         }

@@ -29,6 +29,7 @@ namespace IkuMod.StatusEffects
 
         private IEnumerable<BattleAction> OnPlayerTurnStarting(UnitEventArgs args)
         {
+            this.NotifyActivating();
             yield return BuffAction<IkuSurgeSe>(base.Level, 0, 0, 0, 0.2f);
             yield break;
         }

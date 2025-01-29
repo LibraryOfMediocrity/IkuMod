@@ -32,13 +32,14 @@ namespace IkuMod.StatusEffects
             veilnext = false;
             base.ReactOwnerEvent<CardUsingEventArgs>(base.Battle.CardUsed, new EventSequencedReactor<CardUsingEventArgs>(this.OnCardUsed));
             base.ReactOwnerEvent<CardUsingEventArgs>(base.Battle.CardUsing, new EventSequencedReactor<CardUsingEventArgs>(this.OnCardUsing));
-            base.ReactOwnerEvent<VeilCardEventArgs>(CustomGameEventManager.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+            base.ReactOwnerEvent<VeilCardEventArgs>(IkuGameEvents.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
         
         private IEnumerable<BattleAction> OnCardUsed(CardUsingEventArgs args)
         {
             if (veilnext && EdgeCases(args))
             {
+                this.NotifyActivating();
                 yield return new VeilCardAction(args.Card);
                 int num = base.Level - 1;
                 base.Level = num;

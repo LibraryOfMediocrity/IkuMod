@@ -36,9 +36,6 @@ IkuSurgeBlock:
   Name: Plasma Screen
   Description: |-
     Gain {Block} |Block|. 
-    |Conduit|: Gain {Block} |Block| again.
-  UpgradedDescription: |-
-    Gain {Block} |Block|. 
     |Conduit|: Gain {Shield} |Barrier|.
   FlavorText: |-
     Not quite the same as your TV.
@@ -144,7 +141,7 @@ IkuThunder:
   Name: Thunder Breaker
   Description: |-
     Gain {Block} |Block|.
-    If the last card played this turn was not an attack card, gain {Value2} |Surge|.
+    If the last card played this turn was not an attack card, gain {Value1} |Surge|.
 
 IkuDragonDrill:
   Name: Dragonfish Drill
@@ -396,11 +393,8 @@ IkuTailwind:
 IkuFaraday:
   Name: Faraday Cage
   Description: |-
-    Gain {Value1} |Graze|.
-    Deal {Damage} damage {HitTimes} times.
-    Draw {Value2} card{Value2:plural one='' other='s'}.
-    |Conduit|: This card is played twice.
-  FlavorText: A card so nice you play it twice.
+    Whenever an attack card is played, increase its damage by {Value1} for the rest of combat.
+  FlavorText: I apologize to large deck players.
 
 IkuGigaBuff:
   Name: Dragon God's Divinity
@@ -468,6 +462,31 @@ IkuRamp:
   Description: |-
     Gain {Value1} |Surge|.
     |Growth|: Gain {Value2} additional |Surge|.
+
+Iku12Volt:
+  Name: "12-Volt Gauge"
+  Description: |-
+    Deal {Damage} damage.
+    |Conduit|: Gain {Value1} |Surge|. {SelfName} is not discarded after it is played.
+
+IkuSuperposition:
+  Name: Superposition
+  Description: |-
+    Move this card's Linked Cards from the draw or discard pile to the hand.
+    Linked Cards: {DiscCards}
+  UpgradedDescription: |-
+    Move this card's Linked Cards from the draw or discard pile to the hand.
+    Gain {Mana}. 
+    Linked Cards: {DiscCards}
+  IfEmpty: Nothing.
+
+IkuQuantum:
+  Name: Quantum Link
+  Description: |-
+    Choose up to {Value1} card{Value1:plural one='' other='s'} in the hand.
+    Add a |Superposition| to the hand that is linked to {Value1:plural one='that card' other='those cards'}.
+  Header: Choose cards
+
 
 
 Note: All card descriptions beyond this point are for experimental cards and do not need translations

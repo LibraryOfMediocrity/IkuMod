@@ -29,13 +29,14 @@ namespace IkuMod.StatusEffects
     {
         protected override void OnAdded(Unit unit)
         {
-            base.ReactOwnerEvent<VeilCardEventArgs>(CustomGameEventManager.PreVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+            base.ReactOwnerEvent<VeilCardEventArgs>(IkuGameEvents.PreVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
 
         private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)
         {
             if (args.Card.CardType == CardType.Status || args.Card.CardType == CardType.Misfortune)
             {
+                this.NotifyActivating();
                 args.CancelBy(this);
                 if (args.Card.Zone != CardZone.Exile) yield return new ExileCardAction(args.Card);
                 yield return new DrawManyCardAction(base.Level);

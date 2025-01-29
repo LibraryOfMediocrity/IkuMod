@@ -24,13 +24,14 @@ namespace IkuMod.StatusEffects
     {
         protected override void OnAdded(Unit unit)
         {
-            base.ReactOwnerEvent<VeilCardEventArgs>(CustomGameEventManager.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
+            base.ReactOwnerEvent<VeilCardEventArgs>(IkuGameEvents.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
 
         private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)
         {
             if (args.Card != null)
             {
+                this.NotifyActivating();
                 yield return new MoveCardAction(args.Card, LBoL.Core.Cards.CardZone.Hand);
             }
             base.Level--;

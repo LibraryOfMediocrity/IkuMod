@@ -37,6 +37,7 @@ namespace IkuMod.StatusEffects
             base.Count++;
             if (base.Count == 4)
             {
+                this.NotifyActivating();
                 yield return new DrawManyCardAction(base.Level);
                 base.Count = 0;
             }

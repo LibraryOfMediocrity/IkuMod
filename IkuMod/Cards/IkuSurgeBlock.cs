@@ -18,12 +18,14 @@ namespace IkuMod.Cards
             CardConfig config = GetCardDefaultConfig();
             config.Rarity = Rarity.Common;
             config.Type = CardType.Defense;
-            config.Block = 12;
-            config.Shield = 12;
+            config.Block = 10;
+            config.Shield = 10;
+            config.UpgradedBlock = 12;
+            config.UpgradedShield = 12;
             config.TargetType = TargetType.Self;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Any = 1, Red = 1 };
-            config.RelativeKeyword = Keyword.Block;
+            config.RelativeKeyword = Keyword.Block | Keyword.Shield;
             config.UpgradedRelativeKeyword = Keyword.Block | Keyword.Shield;
             config.RelativeEffects = new List<string>() { "IkuSurgeSe", "IkuConduitDisc" };
             config.UpgradedRelativeEffects = new List<string>() { "IkuSurgeSe", "IkuConduitDisc" };
@@ -48,14 +50,7 @@ namespace IkuMod.Cards
             yield return new CastBlockShieldAction(Battle.Player, base.Block, true);
             if (base.PlayInTriggered)
             {
-                if (this.IsUpgraded)
-                {
-                    yield return new CastBlockShieldAction(base.Battle.Player, base.Shield, true);
-                }
-                else
-                {
-                    yield return new CastBlockShieldAction(base.Battle.Player, base.Block, true);
-                }
+                yield return new CastBlockShieldAction(base.Battle.Player, base.Shield, true);
                 IkuSurgeSe status = base.Battle.Player.GetStatusEffect<IkuSurgeSe>();
                 yield return status.SurgeUsed();
             }
