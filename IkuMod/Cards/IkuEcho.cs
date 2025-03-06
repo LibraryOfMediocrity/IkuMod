@@ -78,7 +78,6 @@ namespace IkuMod.Cards
                     {
                         yield return new VeilCardAction(card);
                         Card card1 = card.CloneBattleCard();
-                        card1.IsExile = true;
                         yield return new AddCardsToHandAction(card1);
                     }
                 }

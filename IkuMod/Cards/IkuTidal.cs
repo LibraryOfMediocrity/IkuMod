@@ -4,6 +4,7 @@ using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
 using LBoL.Core.Battle;
+using LBoL.Core.Battle.BattleActions;
 using LBoL.Core.Cards;
 using LBoLEntitySideloader.Attributes;
 using System;
@@ -25,6 +26,8 @@ namespace IkuMod.Cards
             config.TargetType = TargetType.SingleEnemy;
             config.GunName = GunNameID.GetGunFromId(30030);
             config.GunNameBurst = GunNameID.GetGunFromId(30030);
+            config.HideMesuem = true;
+            config.IsPooled = false;
             config.Rarity = Rarity.Uncommon;
             config.Colors = new List<ManaColor>() { ManaColor.Blue };
             config.Cost = new ManaGroup() { Any = 1, Blue = 1 };
@@ -32,6 +35,7 @@ namespace IkuMod.Cards
             config.UpgradedDamage = 10;
             config.Value1 = 7;
             config.UpgradedValue1 = 10;
+            config.Value2 = 3;
             config.Keywords = Keyword.Accuracy;
             config.UpgradedKeywords = Keyword.Accuracy;
             config.RelativeEffects = new List<string>() { "IkuVeilDisc" };
@@ -44,6 +48,8 @@ namespace IkuMod.Cards
     [EntityLogic(typeof(IkuTidalDef))]
     public sealed class IkuTidal : Card
     {
+
+        
         public int CardCount = 0;
 
         public override int AdditionalDamage => base.Value1 * CardCount;
@@ -59,7 +65,9 @@ namespace IkuMod.Cards
             }
             yield return AttackAction(selector);
             CardCount = 0;
+            yield return new DrawManyCardAction(Value2);
             yield break;
         }
+        
     }
 }

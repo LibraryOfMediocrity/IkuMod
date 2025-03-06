@@ -80,7 +80,7 @@ namespace IkuMod.StatusEffects
                 if (damageInfo > 0f)
                 {
                     this.NotifyActivating(); 
-                    yield return new CastBlockShieldAction(Owner, damageInfo, 0, BlockShieldType.Direct, false);
+                    yield return new CastBlockShieldAction(Owner, 0, damageInfo, BlockShieldType.Direct, false);
                 }
             }
             yield break;

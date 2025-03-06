@@ -29,8 +29,8 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Any = 0 };
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
-            config.Keywords = Keyword.Exile;
-            config.UpgradedKeywords = Keyword.Exile;
+            config.Keywords = Keyword.Exile | Keyword.Retain;
+            config.UpgradedKeywords = Keyword.Exile | Keyword.Retain;
             config.RelativeCards = new List<string>() { "IkuSuperposition" };
             config.UpgradedRelativeCards = new List<string>() { "IkuSuperposition" };
             config.Index = CardIndexGenerator.GetUniqueIndex(config);

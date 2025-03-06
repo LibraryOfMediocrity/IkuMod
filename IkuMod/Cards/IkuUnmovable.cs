@@ -27,11 +27,11 @@ namespace IkuMod.Cards
             config.Type = CardType.Defense;
             config.Rarity = Rarity.Uncommon;
             config.TargetType = TargetType.Nobody;
-            config.Colors = new List<ManaColor>() { ManaColor.Blue };
+            config.Colors = new List<ManaColor>() { ManaColor.White };
             config.Cost = new ManaGroup() { Any = 1 };
             config.UpgradedCost = new ManaGroup() { Any = 0 };
-            config.Shield = 20;
-            config.UpgradedShield = 30;
+            config.Shield = 30;
+            config.UpgradedShield = 40;
             config.Value1 = 1;
             config.RelativeKeyword = Keyword.Shield;
             config.UpgradedRelativeKeyword = Keyword.Shield;

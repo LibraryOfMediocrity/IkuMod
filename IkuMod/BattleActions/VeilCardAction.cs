@@ -39,4 +39,5 @@ namespace IkuMod.BattleActions
             base.React(new Reactor(new MoveCardToDrawZoneAction(Args.Card, DrawZoneTarget.Random)));
         }
     }
+
 }

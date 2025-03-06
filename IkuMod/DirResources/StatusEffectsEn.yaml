@@ -85,7 +85,7 @@ IkuArcSe:
 
 IkuLaidPlanSe:
   Name: Slipstream
-  Description: At the end of the turn, choose {Level} card{Level:plural one='' other's'} to |Veil|.
+  Description: At the very end of the turn, choose {Level} card{Level:plural one='' other's'} in the discard pile to |Veil|.
   Header: Choose cards to Veil.
 
 IkuVisitorSe:
@@ -95,15 +95,15 @@ IkuVisitorSe:
 
 IkuDefensiveSe:
   Name: Offensive Defense
-  Description: The next {Level:plural one='attack card' other='% attack cards'} played this turn give{Level:plural one='s' other=''} |Block| equal to damage dealt.
+  Description: The next {Level:plural one='attack card' other='% attack cards'} played this turn give{Level:plural one='s' other=''} |Barrier| equal to damage dealt.
 
 IkuOceanSe:
   Name: Ocean of Clouds
   Description: Whenever 4 cards are played in a turn, draw {Level} card{Level:plural one='' other='s'}.
 
 IkuFaradaySe:
- Name: Faraday Cage
- Description: Whenever an attack card is played, increase its base damage by {Level} for the rest of combat.
+  Name: Faraday Cage
+  Description: Whenever an attack card is played, increase its base damage by {Level} for the rest of combat.
 
 
 

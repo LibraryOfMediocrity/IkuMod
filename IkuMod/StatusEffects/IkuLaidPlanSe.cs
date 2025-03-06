@@ -29,7 +29,7 @@ namespace IkuMod.StatusEffects
     {
         protected override void OnAdded(Unit unit)
         {
-            base.ReactOwnerEvent<UnitEventArgs>(base.Battle.Player.TurnEnding, new EventSequencedReactor<UnitEventArgs>(this.OnTurnEnding));
+            base.ReactOwnerEvent<UnitEventArgs>(base.Battle.Player.TurnEnded, new EventSequencedReactor<UnitEventArgs>(this.OnTurnEnded));
         }
 
         private string Header
@@ -40,12 +40,12 @@ namespace IkuMod.StatusEffects
             }
         }
 
-        private IEnumerable<BattleAction> OnTurnEnding(UnitEventArgs args)
+        private IEnumerable<BattleAction> OnTurnEnded(UnitEventArgs args)
         {
-            if (base.Battle.HandZone.Count > 0 && !base.Battle.BattleShouldEnd)
+            if (base.Battle.DiscardZone.Count > 0 && !base.Battle.BattleShouldEnd)
             {
                 this.NotifyActivating();
-                SelectCardInteraction interaction = new SelectCardInteraction(0, base.Level, base.Battle.HandZone)
+                SelectCardInteraction interaction = new SelectCardInteraction(0, base.Level, base.Battle.DiscardZone)
                 {
                     Source = this,
                     Description = Header

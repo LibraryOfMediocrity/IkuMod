@@ -25,8 +25,8 @@ namespace IkuMod.Cards
             config.Cost = new ManaGroup() { Red = 1 };
             config.Value1 = 1;
             config.UpgradedValue1 = 2;
-            config.RelativeKeyword = Keyword.Block;
-            config.UpgradedRelativeKeyword = Keyword.Block;
+            config.RelativeKeyword = Keyword.Shield;
+            config.UpgradedRelativeKeyword = Keyword.Shield;
             config.Index = CardIndexGenerator.GetUniqueIndex(config);
             return config;
         }

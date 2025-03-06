@@ -21,7 +21,7 @@ namespace IkuMod.Cards
         {
             CardConfig config = GetCardDefaultConfig();
             config.Rarity = Rarity.Common;
-            config.Type = CardType.Attack;
+            config.Type = CardType.Defense;
             config.Colors = new List<ManaColor>() { ManaColor.Red };
             config.Cost = new ManaGroup() { Red = 2 };
             config.Block = 14;

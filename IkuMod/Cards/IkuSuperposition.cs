@@ -1,4 +1,5 @@
-﻿using IkuMod.Cards.Template;
+﻿using IkuMod.BattleActions;
+using IkuMod.Cards.Template;
 using LBoL.Base;
 using LBoL.ConfigData;
 using LBoL.Core;
@@ -47,6 +48,7 @@ namespace IkuMod.Cards
             {
                 TrySetLinked(args.Card);
             });
+            base.ReactBattleEvent<VeilCardEventArgs>(IkuGameEvents.PostVeilEvent, new EventSequencedReactor<VeilCardEventArgs>(this.OnCardVeiled));
         }
 
         private void SetValue1()
@@ -102,6 +104,18 @@ namespace IkuMod.Cards
                 }
                 return cards;
             }
+        }
+
+        private IEnumerable<BattleAction> OnCardVeiled(VeilCardEventArgs args)
+        {
+            if (args.Card == this)
+            {
+                foreach(Card card in Linked)
+                {
+                    if (card.Zone == CardZone.Draw || card.Zone == CardZone.Discard) yield return new VeilCardAction(card);
+                }
+            }
+            yield break;
         }
 
         protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
